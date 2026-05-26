@@ -10,18 +10,21 @@
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fafaf7;
-    --ink:#111;
-    --muted:#5b5b5b;
-    --line:#e8e6e0;
+    --bg:#f6f8fb;
+    --ink:#0f1b2d;
+    --muted:#5a6478;
+    --line:#e3e8f0;
     --card:#fff;
-    --accent:#111;
-    --accent-2:#f3efe7;
+    --accent:#0a7ea4;        /* океанский синий */
+    --accent-dark:#075d7a;
+    --accent-soft:#e6f3f8;   /* светлый небесный для блоков */
+    --warm:#fff4e0;          /* тёплый песочный для акцентов */
+    --warm-line:#f5d99a;
     --tg:#229ED9;
-    --radius:14px;
+    --radius:16px;
     --maxw:680px;
   }
   *{box-sizing:border-box}
@@ -31,80 +34,88 @@
     background:var(--bg);
     color:var(--ink);
     font-size:17px;
-    line-height:1.65;
+    line-height:1.7;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
-    padding-bottom:96px;
+    padding-bottom:110px;
   }
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 22px}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;letter-spacing:-.01em;line-height:1.2}
-  h1{font-size:clamp(30px,6vw,44px);margin:18px 0 14px}
-  h2{font-size:clamp(24px,4.5vw,32px);margin:48px 0 14px}
-  h3{font-size:20px;margin:24px 0 8px;font-weight:600}
-  p{margin:12px 0;color:#1a1a1a}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px}
+  @media(max-width:560px){
+    body{font-size:16px;line-height:1.72}
+    .wrap{padding:20px 18px}
+  }
+  h1,h2,h3{font-family:'Manrope',-apple-system,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.18;color:var(--ink)}
+  h1{font-size:clamp(28px,6vw,42px);margin:18px 0 14px}
+  h2{font-size:clamp(22px,4.5vw,30px);margin:52px 0 16px}
+  h3{font-size:19px;margin:26px 0 10px;font-weight:700}
+  p{margin:14px 0;color:#1a2438}
   em{color:var(--muted);font-style:italic}
-  strong{font-weight:600}
-  a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+  strong{font-weight:700;color:var(--ink)}
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
   ul{padding-left:0;margin:14px 0;list-style:none}
-  ul li{padding:10px 0;margin:0;border-bottom:1px solid var(--line)}
+  ul li{padding:12px 0;margin:0;border-bottom:1px solid var(--line);line-height:1.6}
   ul li:last-child{border-bottom:none}
-  .cta-block.cta-dark ul li{border-bottom-color:#262626}
-  /* большая нумерация секций */
+  .cta-block.cta-dark ul li{border-bottom-color:rgba(255,255,255,.18)}
+  .sc.win ul li{border-bottom-color:rgba(255,255,255,.18)}
+  /* нумерация секций — цветная плашка */
   .num{
-    display:inline-block;font-family:'Fraunces',serif;font-weight:700;
-    color:#c9c2b0;margin-right:12px;font-size:1.05em;letter-spacing:.02em
+    display:inline-block;font-family:'Manrope',sans-serif;font-weight:800;
+    color:var(--accent);background:var(--accent-soft);
+    border-radius:9px;padding:2px 10px;margin-right:10px;
+    font-size:.78em;letter-spacing:.02em;vertical-align:middle
   }
   hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 
   .kicker{
-    display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--muted);border:1px solid var(--line);border-radius:999px;
-    padding:6px 12px;background:#fff
+    display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+    color:var(--accent);background:var(--accent-soft);border:1px solid #c5e2ed;border-radius:999px;
+    padding:6px 14px
   }
   .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:14px;margin-top:6px}
-  .meta .dot{width:4px;height:4px;border-radius:50%;background:#bdbab2;display:inline-block}
+  .meta .dot{width:4px;height:4px;border-radius:50%;background:#b8c0cf;display:inline-block}
 
-  .lead{font-size:19px;color:#222}
+  .lead{font-size:19px;color:#1a2438}
   .callout{
     background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:18px 20px;margin:20px 0
+    padding:20px 22px;margin:22px 0;
+    box-shadow:0 1px 2px rgba(15,27,45,.04)
   }
-  .callout.accent{background:var(--accent-2);border-color:#ece5d4}
+  .callout.accent{background:var(--warm);border-color:var(--warm-line)}
+  .callout.sky{background:var(--accent-soft);border-color:#c5e2ed}
 
   .stats{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 8px}
   @media(min-width:560px){.stats{grid-template-columns:repeat(3,1fr)}}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-  .stat .num{font-family:'Fraunces',serif;font-size:34px;font-weight:700;line-height:1}
-  .stat .lbl{color:var(--muted);font-size:14px;margin-top:6px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 1px 2px rgba(15,27,45,.04)}
+  .stat .num{font-family:'Manrope',sans-serif;font-size:32px;font-weight:800;line-height:1;color:var(--accent);letter-spacing:-.02em}
+  .stat .lbl{color:var(--muted);font-size:14px;margin-top:8px;line-height:1.5}
 
-  .price{
-    display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0
-  }
+  .price{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
   @media(min-width:560px){.price{grid-template-columns:repeat(3,1fr)}}
-  .price .row{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .price .row{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
   .price .row .src{font-size:13px;color:var(--muted)}
-  .price .row .val{font-size:22px;font-weight:700;font-family:'Fraunces',serif;margin-top:4px}
-  .price .row.win{background:#0f0f0f;color:#fff;border-color:#0f0f0f}
-  .price .row.win .src{color:#bdbab2}
+  .price .row .val{font-size:22px;font-weight:800;font-family:'Manrope',sans-serif;margin-top:4px}
+  .price .row.win{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .price .row.win .src{color:#c5e2ed}
+  .price .row.win .val{color:#fff}
 
   .scenarios{display:grid;gap:14px;margin:18px 0}
-  .sc{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:18px}
-  .sc .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-  .sc.win,.sc.win p,.sc.win strong{color:#fff}
-  .sc.win{background:#0f0f0f;border-color:#0f0f0f}
-  .sc.win .tag{color:#bdbab2}
-  .sc.win em{color:#bdbab2}
+  .sc{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:20px;box-shadow:0 1px 2px rgba(15,27,45,.04)}
+  .sc .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .sc.win{background:linear-gradient(135deg,#0a7ea4 0%,#075d7a 100%);border-color:var(--accent-dark);box-shadow:0 8px 24px rgba(10,126,164,.25)}
+  .sc.win,.sc.win p,.sc.win h3,.sc.win strong{color:#fff}
+  .sc.win .tag{color:#a8d8e8}
+  .sc.win em{color:#c5e2ed}
 
-  /* dark cta block — единый класс вместо инлайн-стилей */
-  .cta-block.cta-dark{background:#0f0f0f;border-color:#0f0f0f}
+  /* акцентный cta-блок — синий вместо чёрного */
+  .cta-block.cta-dark{background:linear-gradient(135deg,#0a7ea4 0%,#075d7a 100%);border-color:var(--accent-dark);box-shadow:0 10px 30px rgba(10,126,164,.25)}
   .cta-block.cta-dark,
   .cta-block.cta-dark p,
   .cta-block.cta-dark li,
   .cta-block.cta-dark h3,
   .cta-block.cta-dark strong{color:#fff}
-  .cta-block.cta-dark em{color:#bdbab2}
-  .cta-block.cta-dark .kicker{background:transparent;color:#bdbab2;border-color:#2a2a2a}
-  .cta-block.cta-dark .btn-sub{color:#bdbab2}
+  .cta-block.cta-dark em{color:#c5e2ed}
+  .cta-block.cta-dark .kicker{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.25)}
+  .cta-block.cta-dark .btn-sub{color:#c5e2ed}
 
   /* фигуры с картинками */
   figure{margin:22px 0}
@@ -117,40 +128,48 @@
 
   .cta-block{
     background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:22px;margin:18px 0
+    padding:24px;margin:20px 0;box-shadow:0 1px 2px rgba(15,27,45,.04)
   }
   .btn{
     display:flex;align-items:center;justify-content:center;gap:10px;
-    width:100%;padding:16px 18px;border-radius:12px;
-    font-weight:600;font-size:16px;text-decoration:none;border:1px solid transparent;
-    transition:transform .05s ease, box-shadow .15s ease;
+    width:100%;padding:17px 18px;border-radius:12px;
+    font-weight:700;font-size:16px;text-decoration:none;border:1px solid transparent;
+    transition:transform .08s ease, box-shadow .15s ease;
   }
   .btn:active{transform:translateY(1px)}
-  .btn-primary{background:#0f0f0f;color:#fff}
-  .btn-primary:hover{box-shadow:0 8px 20px rgba(0,0,0,.18)}
-  .btn-secondary{background:#fff;color:#0f0f0f;border-color:#0f0f0f}
-  .btn-tg{background:var(--tg);color:#fff}
-  .btn-sub{font-size:13px;color:var(--muted);text-align:center;margin-top:8px}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(10,126,164,.3)}
+  .btn-primary:hover{background:var(--accent-dark);box-shadow:0 8px 22px rgba(10,126,164,.4)}
+  .btn-secondary{background:#fff;color:var(--accent);border-color:var(--accent)}
+  .btn-tg{background:var(--tg);color:#fff;box-shadow:0 4px 14px rgba(34,158,217,.3)}
+  .btn-tg:hover{box-shadow:0 8px 22px rgba(34,158,217,.4)}
+  .btn-light{background:#fff;color:var(--accent-dark)}
+  .btn-sub{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
 
-  .step{display:flex;gap:12px;align-items:flex-start;margin:10px 0}
-  .step .n{flex:0 0 28px;height:28px;border-radius:50%;background:#0f0f0f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600}
+  .step{display:flex;gap:14px;align-items:flex-start;margin:14px 0}
+  .step .n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;box-shadow:0 2px 8px rgba(10,126,164,.3)}
 
   blockquote{
-    margin:18px 0;padding:14px 18px;border-left:3px solid #0f0f0f;
-    background:#fff;border-radius:0 12px 12px 0;color:#1a1a1a
+    margin:22px 0;padding:18px 22px;border-left:4px solid var(--accent);
+    background:var(--accent-soft);border-radius:0 14px 14px 0;color:#0f1b2d;font-size:17px
+  }
+
+  .num-badge{
+    display:inline-block;font-family:'Manrope',sans-serif;font-weight:800;
+    color:var(--accent);background:var(--accent-soft);border-radius:10px;
+    padding:2px 10px;margin-right:10px;font-size:.85em;letter-spacing:.02em
   }
 
   .sticky{
     position:fixed;left:0;right:0;bottom:0;z-index:50;
-    background:rgba(250,250,247,.92);backdrop-filter:saturate(160%) blur(10px);
+    background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(12px);
     border-top:1px solid var(--line);
-    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    padding:12px 14px calc(12px + env(safe-area-inset-bottom));
+    box-shadow:0 -4px 16px rgba(15,27,45,.06)
   }
   .sticky .row{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .sticky .btn{padding:13px 12px;font-size:14px;border-radius:10px}
+  .sticky .btn{padding:14px 12px;font-size:14px;border-radius:11px}
 
   .foot{color:var(--muted);font-size:13px;text-align:center;margin-top:24px}
-  .check{color:#0f0f0f;font-weight:700}
 </style>
 </head>
 <body>
@@ -396,7 +415,7 @@
     </div>
   </div>
 
-  <p style="text-align:center;font-family:'Fraunces',serif;font-size:22px;margin:24px 0 8px">
+  <p style="text-align:center;font-size:20px;font-weight:700;color:var(--accent-dark);margin:28px 0 8px">
     И да, это доступно каждому. Но не для каждого.
   </p>
 
@@ -450,7 +469,7 @@
     <p><strong>⏱ Время:</strong> 15–20 минут на первый разговор. <br>
     <strong>💵 Стоимость:</strong> ноль. Мне выгодно работать с теми, кто готов расти.</p>
 
-    <a class="btn btn-primary" style="background:#fff;color:#0f0f0f" href="https://t.me/dellioner" target="_blank" rel="noopener">
+    <a class="btn btn-light" href="https://t.me/dellioner" target="_blank" rel="noopener">
       ✍️ Написать мне в Telegram
     </a>
     <div class="btn-sub">@dellioner — отвечаю лично</div>
