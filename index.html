@@ -24,6 +24,9 @@
     --coral:#ff6b4a;
     --coral-dark:#e8543a;
     --coral-soft:#fff0ec;
+    --emerald:#10b981;
+    --emerald-dark:#059669;
+    --emerald-soft:#e6f7f0;
     --warm:#fff4e0;
     --warm-line:#f5d99a;
     --tg:#229ED9;
@@ -85,6 +88,7 @@
   }
   .callout.accent{background:var(--warm);border-color:var(--warm-line)}
   .callout.sky{background:var(--accent-soft);border-color:#c5e2ed}
+  .callout.coral{background:var(--coral-soft);border-color:#f8c4b6}
 
   .stats{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 8px}
   @media(min-width:560px){.stats{grid-template-columns:repeat(3,1fr)}}
@@ -93,7 +97,7 @@
     border:none;border-radius:var(--radius);padding:22px 20px;
     box-shadow:0 6px 18px rgba(10,126,164,.22);color:#fff
   }
-  .stat:nth-child(2){background:linear-gradient(135deg,#ff6b4a 0%,#e8543a 100%);box-shadow:0 6px 18px rgba(255,107,74,.25)}
+  .stat:nth-child(2){background:linear-gradient(135deg,#10b981 0%,#059669 100%);box-shadow:0 6px 18px rgba(16,185,129,.25)}
   .stat .num{
     font-family:'Manrope',sans-serif;font-size:34px;font-weight:800;line-height:1;
     color:#fff;letter-spacing:-.02em;
@@ -118,15 +122,15 @@
   .sc.win .tag{color:#a8d8e8}
   .sc.win em{color:#c5e2ed}
 
-  .cta-block.cta-dark{background:linear-gradient(135deg,#0a7ea4 0%,#075d7a 100%);border-color:var(--accent-dark);box-shadow:0 10px 30px rgba(10,126,164,.25)}
+  .cta-block.cta-dark{background:linear-gradient(135deg,#ff7a5c 0%,#e8543a 100%);border-color:var(--coral-dark);box-shadow:0 10px 30px rgba(255,107,74,.28)}
   .cta-block.cta-dark,
   .cta-block.cta-dark p,
   .cta-block.cta-dark li,
   .cta-block.cta-dark h3,
   .cta-block.cta-dark strong{color:#fff}
-  .cta-block.cta-dark em{color:#c5e2ed}
-  .cta-block.cta-dark .kicker{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.25)}
-  .cta-block.cta-dark .btn-sub{color:#c5e2ed}
+  .cta-block.cta-dark em{color:rgba(255,255,255,.85)}
+  .cta-block.cta-dark .kicker{background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.3)}
+  .cta-block.cta-dark .btn-sub{color:rgba(255,255,255,.85)}
 
   figure{margin:22px 0}
   figure img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);background:#fff}
@@ -147,14 +151,24 @@
     transition:transform .08s ease, box-shadow .15s ease;
   }
   .btn:active{transform:translateY(1px)}
-  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 6px 18px rgba(255,107,74,.35)}
-  .btn-primary:hover{background:var(--coral-dark);box-shadow:0 10px 26px rgba(255,107,74,.45)}
+  .btn-primary{background:var(--emerald);color:#fff;box-shadow:0 6px 18px rgba(16,185,129,.35)}
+  .btn-primary:hover{background:var(--emerald-dark);box-shadow:0 10px 26px rgba(16,185,129,.45)}
   .btn-secondary{background:#fff;color:var(--accent);border-color:var(--accent)}
   .btn-tg{background:var(--tg);color:#fff;box-shadow:0 4px 14px rgba(34,158,217,.3)}
   .btn-tg:hover{box-shadow:0 8px 22px rgba(34,158,217,.4)}
-  .btn-light{background:#fff;color:var(--accent-dark)}
-  .btn-light:hover{background:var(--coral-soft);color:var(--coral-dark)}
+  .btn-light{background:#fff;color:var(--emerald-dark)}
+  .btn-light:hover{background:var(--emerald-soft);color:var(--emerald-dark)}
   .btn-sub{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+
+  /* мягкий встроенный CTA по тексту */
+  .cta-inline{
+    background:var(--emerald-soft);border:1px solid #c4ead9;border-radius:var(--radius);
+    padding:20px 22px;margin:26px 0;text-align:center
+  }
+  .cta-inline p{margin:0 0 14px;font-size:16px;color:#0f1b2d}
+  .cta-inline .btns{display:grid;grid-template-columns:1fr;gap:10px;max-width:420px;margin:0 auto}
+  @media(min-width:480px){.cta-inline .btns{grid-template-columns:1fr 1fr}}
+  .cta-inline .btn{padding:14px 16px;font-size:15px}
 
   .step{display:flex;gap:14px;align-items:flex-start;margin:14px 0}
   .step .n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;box-shadow:0 2px 8px rgba(10,126,164,.3)}
@@ -195,10 +209,14 @@
   <p class="author"><strong>Дмитрий Власов</strong> • @dellioner</p>
   <p><em>13 лет в онлайн-бизнесе и МЛМ. БАДы. Арбитраж. Партнёрки. Сейчас — туризм.</em></p>
 
+  <div class="callout coral">
+    <p style="margin:0"><strong>Сразу честно:</strong> это не гайд «брось всё и катайся по миру». Это про то, как зарабатывать на том, что люди и так делают каждый день — путешествуют. А заодно — самому ездить в 2 раза дешевле.</p>
+  </div>
+
   <div class="callout accent">
     <p style="margin:0;font-size:19px"><strong>Поздравляю! 🥳</strong></p>
     <p style="margin:6px 0 0;font-size:18px"><strong>Ты читаешь это одним из первых</strong></p>
-    <p style="margin:12px 0 0">В мире 50 миллионов человек уже живут так: работают удалённо, путешествуют постоянно, не привязаны ни к офису, ни к одной стране. Большинство людей не понимает, как им удалось это сделать. Сейчас покажу.</p>
+    <p style="margin:12px 0 0">В мире 50 миллионов человек уже живут так: работают удалённо, путешествуют постоянно, не привязаны ни к офису, ни к одной стране. А большинство смотрит на них со стороны и не понимает — как они вообще так смогли.</p>
   </div>
 
   <p><strong>Это документ на 12 минут, который покажет тебе 3 вещи:</strong></p>
@@ -259,7 +277,7 @@
   <p>Поездка — это больше не отпуск. Это статус. Контент. Социальное доказательство. Спрос на «красивые места» удваивается постоянно.</p>
 
   <h3><span class="num">04</span>FOMO работает как никогда сильно</h3>
-  <p>Один друг летит на Бали — десять других хотят тоже. Десять хотят — четверо берут и едут. Это та же механика, по которой растут любые сообщества и клубы по интересам.</p>
+  <p>Один друг летит на Бали — десять других хотят тоже. Это та же механика, по которой растут любые сообщества и клубы по интересам.</p>
 
   <p>По прогнозам аналитиков, этому росту нужно ещё 5–7 лет до пика. Через два года рынок начнёт переполняться. Через пять — он будет таким же зрелым, как сегодняшний рынок недвижимости.</p>
 
@@ -384,6 +402,20 @@
 
   <blockquote><strong>Я показал эту поездку с одной целью — чтобы ты сам оценил продукт и потребность рынка. Люди хотят путешествовать. И люди хотят путешествовать выгоднее. Именно эту возможность мы и даём.</strong></blockquote>
 
+  <div class="callout coral">
+    <p style="margin:0">Сейчас ты можешь сказать: <strong>«да какие мне путешествия»</strong> — и назвать свою причину, почему это не для тебя. Понимаю.</p>
+    <p style="margin:12px 0 0">Но посмотри на всё это иначе: не как на отпуск, а как на инструмент. Ты не продаёшь поездки — ты помогаешь людям, которые <strong>и так путешествуют</strong>, делать это выгоднее. И зарабатываешь на этом.</p>
+    <p style="margin:12px 0 0">А кто-то благодаря тебе вообще <strong>впервые в жизни летит за границу</strong>. Вот это уже не про чемоданы. Это про другую жизнь — твою и чужую.</p>
+  </div>
+
+  <div class="cta-inline">
+    <p>Уже захотелось так же? Можно начать с малого — заглянуть в канал и посмотреть кейсы. А захочешь разобрать свою ситуацию — просто напиши мне.</p>
+    <div class="btns">
+      <a class="btn btn-secondary" href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">📺 Посмотреть канал</a>
+      <a class="btn btn-primary" href="https://t.me/dellioner" target="_blank" rel="noopener">💬 Написать лично</a>
+    </div>
+  </div>
+
   <p>Теперь — про компанию, которая это делает.</p>
 
   <hr>
@@ -483,6 +515,14 @@
   <p>Это не быстрые деньги за неделю. Это работа на 3–12 месяцев с наставником, после которых появляется доход, реально меняющий жизнь. В команде уже есть с кого брать пример.</p>
 
   <p><em>Сейчас у меня ещё есть время работать с каждым лично. По мере роста команды эта возможность будет уменьшаться. А дальше — твой ход. Покажу три варианта, как может выглядеть твой ближайший год.</em></p>
+
+  <div class="cta-inline">
+    <p>Чувствуешь, что это твоё? Тогда не откладывай — напиши, разберём твою ситуацию лично. Или понаблюдай в канале, если пока приглядываешься.</p>
+    <div class="btns">
+      <a class="btn btn-secondary" href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">📺 Посмотреть канал</a>
+      <a class="btn btn-primary" href="https://t.me/dellioner" target="_blank" rel="noopener">💬 Написать лично</a>
+    </div>
+  </div>
 
   <hr>
 
