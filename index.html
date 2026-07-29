@@ -60,6 +60,9 @@ body{
 }
 img{max-width:100%;display:block}
 button{font-family:inherit}
+/* штатный стиль текстовых ссылок, на кнопки не влияет: класс .btn перебивает по специфичности */
+a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:#8b98ff}
 
 /* фон: статичный градиент плюс зерно, без анимации */
 .bg{position:fixed;inset:0;z-index:-2;
@@ -601,6 +604,7 @@ body.locked{overflow:hidden}
         Написать мне в Telegram
       </a>
       <div class="cta-note">Напишите одну фразу: «Прочитал гайд, хочу разобрать свою ситуацию». Договоримся на созвон в ближайшие дни.</div>
+      <div class="cta-note">Не готовы к разговору? Загляните в <a href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">мой канал</a>, там кейсы поездок с цифрами и разборы изнутри.</div>
     </div>
 
     <figure class="cover reveal">
