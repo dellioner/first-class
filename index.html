@@ -1,681 +1,782 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0c12">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230b0c12"/><text x="32" y="44" font-family="Arial" font-size="34" font-weight="bold" text-anchor="middle" fill="%236b7cff">D</text></svg>'>
+
 <title>Как зарабатывать на том, на что люди тратят деньги каждый день</title>
-<meta name="description" content="Короткий гайд для тех, кто ищет новый источник дохода и возможность работать удалённо. Туризм, MWR Life, команда «Первый класс».">
+<meta name="description" content="Манифест свободного человека. Время чтения около 12 минут.">
 <meta property="og:title" content="Как зарабатывать на том, на что люди тратят деньги каждый день">
-<meta property="og:description" content="Гайд на 12 минут: ниша туризма, цифры, путь и как зайти.">
+<meta property="og:description" content="Манифест свободного человека. Время чтения около 12 минут.">
 <meta property="og:type" content="article">
+<meta property="og:image" content="https://dellioner.github.io/first-class/images/01-cover.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --bg:#f6f8fb;
-    --ink:#0f1b2d;
-    --muted:#5a6478;
-    --line:#e3e8f0;
-    --card:#fff;
-    --accent:#0a7ea4;
-    --accent-dark:#075d7a;
-    --accent-soft:#e6f3f8;
-    --coral:#ff6b4a;
-    --coral-dark:#e8543a;
-    --coral-soft:#fff0ec;
-    --emerald:#10b981;
-    --emerald-dark:#059669;
-    --emerald-soft:#e6f7f0;
-    --warm:#fff4e0;
-    --warm-line:#f5d99a;
-    --tg:#229ED9;
-    --radius:16px;
-    --maxw:680px;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    font-size:17px;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    padding-bottom:110px;
-  }
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px}
-  @media(max-width:560px){
-    body{font-size:16px;line-height:1.72}
-    .wrap{padding:20px 18px}
-  }
-  h1,h2,h3{font-family:'Manrope',-apple-system,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.18;color:var(--ink)}
-  h1{font-size:clamp(28px,6vw,42px);margin:18px 0 14px}
-  h2{font-size:clamp(22px,4.5vw,30px);margin:18px 0 16px}
-  h3{font-size:19px;margin:26px 0 10px;font-weight:700}
-  p{margin:14px 0;color:#1a2438}
-  em{color:var(--muted);font-style:italic}
-  strong{font-weight:700;color:var(--ink)}
-  a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-  ul{padding-left:0;margin:14px 0;list-style:none}
-  ul li{padding:12px 0;margin:0;border-bottom:1px solid var(--line);line-height:1.6}
-  ul li:last-child{border-bottom:none}
-  .cta-block.cta-dark ul li{border-bottom-color:rgba(255,255,255,.18)}
-  .sc.win ul li{border-bottom-color:rgba(255,255,255,.18)}
-  .num{
-    display:inline-block;font-family:'Manrope',sans-serif;font-weight:800;
-    color:var(--accent);background:var(--accent-soft);
-    border-radius:9px;padding:2px 10px;margin-right:10px;
-    font-size:.78em;letter-spacing:.02em;vertical-align:middle
-  }
-  hr{border:0;border-top:1px solid var(--line);margin:40px 0}
-  .section-top{margin-top:52px}
+/* ===================================================================
+   ДИЗАЙН-ТОКЕНЫ
+   =================================================================== */
+:root{
+  --bg:#0b0c12;
+  --bg-deep:#08080c;
+  --text:#dcdce4;
+  --text-strong:#f5f5f7;
+  --muted:#9b9baa;
+  --muted-2:#6d6d7c;
+  --line:rgba(255,255,255,.09);
+  --line-strong:rgba(255,255,255,.16);
+  --glass:rgba(255,255,255,.035);
+  --glass-2:rgba(255,255,255,.06);
 
-  .kicker{
-    display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
-    color:var(--accent);background:var(--accent-soft);border:1px solid #c5e2ed;border-radius:999px;
-    padding:6px 14px
-  }
-  .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:14px;margin-top:6px}
-  .meta .dot{width:4px;height:4px;border-radius:50%;background:#b8c0cf;display:inline-block}
+  --accent:#6b7cff;
+  --accent-ink:#fff;
+  --accent-weak:rgba(107,124,255,.14);
+  --accent-line:rgba(107,124,255,.34);
 
-  .lead{font-size:19px;color:#1a2438}
-  .hero{text-align:center}
-  .hero .author{justify-content:center}
-  .hero .lead{margin-left:auto;margin-right:auto;max-width:560px}
-  .callout{
-    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:20px 22px;margin:22px 0;
-    box-shadow:0 1px 2px rgba(15,27,45,.04)
-  }
-  .callout.accent{background:var(--warm);border-color:var(--warm-line)}
-  .callout.sky{background:var(--accent-soft);border-color:#c5e2ed}
-  .callout.coral{background:var(--coral-soft);border-color:#f8c4b6}
+  --radius:22px;
+  --radius-sm:16px;
+  --maxw:620px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
 
-  .stats{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 8px}
-  @media(min-width:560px){.stats{grid-template-columns:repeat(3,1fr)}}
-  .stat{
-    background:linear-gradient(135deg,#0a7ea4 0%,#075d7a 100%);
-    border:none;border-radius:var(--radius);padding:22px 20px;
-    box-shadow:0 6px 18px rgba(10,126,164,.22);color:#fff
-  }
-  .stat:nth-child(2){background:linear-gradient(135deg,#10b981 0%,#059669 100%);box-shadow:0 6px 18px rgba(16,185,129,.25)}
-  .stat .num{
-    font-family:'Manrope',sans-serif;font-size:34px;font-weight:800;line-height:1;
-    color:#fff;letter-spacing:-.02em;
-    background:none;padding:0;margin:0;border-radius:0;display:block
-  }
-  .stat .lbl{color:rgba(255,255,255,.92);font-size:14px;margin-top:10px;line-height:1.5}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-size:17.5px;
+  line-height:1.65;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+button{font-family:inherit}
 
-  .price{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}
-  @media(min-width:560px){.price{grid-template-columns:repeat(3,1fr)}}
-  .price .row{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
-  .price .row .src{font-size:13px;color:var(--muted)}
-  .price .row .val{font-size:22px;font-weight:800;font-family:'Manrope',sans-serif;margin-top:4px}
-  .price .row.win{background:var(--accent);color:#fff;border-color:var(--accent)}
-  .price .row.win .src{color:#c5e2ed}
-  .price .row.win .val{color:#fff}
+/* фон: статичный градиент плюс зерно, без анимации */
+.bg{position:fixed;inset:0;z-index:-2;
+  background:radial-gradient(130% 80% at 50% -10%,#15161f 0%,var(--bg) 55%,var(--bg-deep) 100%)}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  .scenarios{display:grid;gap:14px;margin:18px 0}
-  .sc{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:20px;box-shadow:0 1px 2px rgba(15,27,45,.04)}
-  .sc .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .sc.win{background:linear-gradient(135deg,#0a7ea4 0%,#075d7a 100%);border-color:var(--accent-dark);box-shadow:0 8px 24px rgba(10,126,164,.25)}
-  .sc.win,.sc.win p,.sc.win h3,.sc.win strong{color:#fff}
-  .sc.win .tag{color:#a8d8e8}
-  .sc.win em{color:#c5e2ed}
+/* прогресс чтения */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--accent);
+  box-shadow:0 0 12px rgba(107,124,255,.5);transition:width .1s linear}
 
-  .cta-block.cta-dark{background:linear-gradient(135deg,#ff7a5c 0%,#e8543a 100%);border-color:var(--coral-dark);box-shadow:0 10px 30px rgba(255,107,74,.28)}
-  .cta-block.cta-dark,
-  .cta-block.cta-dark p,
-  .cta-block.cta-dark li,
-  .cta-block.cta-dark h3,
-  .cta-block.cta-dark strong{color:#fff}
-  .cta-block.cta-dark em{color:rgba(255,255,255,.85)}
-  .cta-block.cta-dark .kicker{background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.3)}
-  .cta-block.cta-dark .btn-sub{color:rgba(255,255,255,.85)}
+/* ===================================================================
+   ЛЭЙАУТ И ТИПОГРАФИКА
+   =================================================================== */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;
+  padding-top:max(34px,env(safe-area-inset-top));
+  padding-bottom:max(64px,env(safe-area-inset-bottom))}
 
-  figure{margin:22px 0}
-  figure img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);background:#fff}
-  figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic;line-height:1.45}
-  .gallery{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0}
-  @media(min-width:560px){.gallery.cols-2{grid-template-columns:1fr 1fr}.gallery.cols-3{grid-template-columns:repeat(3,1fr)}}
-  .gallery figure{margin:0}
-  .cover img{border-radius:16px}
+p{margin:0 0 20px}
+p:last-child{margin-bottom:0}
+strong{color:var(--text-strong);font-weight:600}
 
-  .cta-block{
-    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:24px;margin:20px 0;box-shadow:0 1px 2px rgba(15,27,45,.04)
-  }
-  .btn{
-    display:flex;align-items:center;justify-content:center;gap:10px;
-    width:100%;padding:17px 18px;border-radius:12px;
-    font-weight:700;font-size:16px;text-decoration:none;border:1px solid transparent;
-    transition:transform .08s ease, box-shadow .15s ease;
-  }
-  .btn:active{transform:translateY(1px)}
-  .btn-primary{background:var(--emerald);color:#fff;box-shadow:0 6px 18px rgba(16,185,129,.35)}
-  .btn-primary:hover{background:var(--emerald-dark);box-shadow:0 10px 26px rgba(16,185,129,.45)}
-  .btn-secondary{background:#fff;color:var(--accent);border-color:var(--accent)}
-  .btn-tg{background:var(--tg);color:#fff;box-shadow:0 4px 14px rgba(34,158,217,.3)}
-  .btn-tg:hover{box-shadow:0 8px 22px rgba(34,158,217,.4)}
-  .btn-light{background:#fff;color:var(--emerald-dark)}
-  .btn-light:hover{background:var(--emerald-soft);color:var(--emerald-dark)}
-  .btn-sub{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+h1{font-family:"Manrope",sans-serif;font-weight:800;font-size:clamp(28px,7vw,40px);
+  line-height:1.16;letter-spacing:-.01em;color:var(--text-strong);margin:0 0 18px}
+h2{font-family:"Manrope",sans-serif;font-weight:800;font-size:clamp(23px,5.4vw,29px);
+  line-height:1.22;letter-spacing:-.01em;color:var(--text-strong);margin:0 0 22px}
+h3{font-family:"Manrope",sans-serif;font-weight:700;font-size:19px;line-height:1.3;
+  color:var(--text-strong);margin:34px 0 12px}
 
-  /* мягкий встроенный CTA по тексту */
-  .cta-inline{
-    background:var(--emerald-soft);border:1px solid #c4ead9;border-radius:var(--radius);
-    padding:20px 22px;margin:26px 0;text-align:center
-  }
-  .cta-inline p{margin:0 0 14px;font-size:16px;color:#0f1b2d}
-  .cta-inline .btns{display:grid;grid-template-columns:1fr;gap:10px;max-width:420px;margin:0 auto}
-  @media(min-width:480px){.cta-inline .btns{grid-template-columns:1fr 1fr}}
-  .cta-inline .btn{padding:14px 16px;font-size:15px}
+.hero{padding:8px 0 4px}
+.hero h1{margin-bottom:14px}
+.hero-sub{color:var(--accent);font-size:16px;font-weight:600;letter-spacing:.01em;margin:0 0 10px}
+.hero-time{color:var(--muted-2);font-size:13.5px;margin:0 0 30px}
 
-  .step{display:flex;gap:14px;align-items:flex-start;margin:14px 0}
-  .step .n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;box-shadow:0 2px 8px rgba(10,126,164,.3)}
+.author{margin:18px 0 0}
+.author .n{color:var(--text-strong);font-weight:600;font-size:16px}
+.author .d{color:var(--muted);font-size:14.5px;margin-top:3px;line-height:1.55}
 
-  blockquote{
-    margin:22px 0;padding:18px 22px;border-left:4px solid var(--accent);
-    background:var(--accent-soft);border-radius:0 14px 14px 0;color:#0f1b2d;font-size:17px
-  }
+/* разделитель между частями */
+.part{margin-top:64px;padding-top:38px;border-top:1px solid var(--line)}
+.eyebrow{display:block;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px}
+.lead-block{margin-top:44px}
 
-  .sticky{
-    position:fixed;left:0;right:0;bottom:0;z-index:50;
-    background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(12px);
-    border-top:1px solid var(--line);
-    padding:12px 14px calc(12px + env(safe-area-inset-bottom));
-    box-shadow:0 -4px 16px rgba(15,27,45,.06)
-  }
-  .sticky .row{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .sticky .btn{padding:14px 12px;font-size:14px;border-radius:11px}
+/* картинки */
+figure{margin:32px 0}
+figure img{width:100%;height:auto;border-radius:var(--radius-sm);border:1px solid var(--line);
+  background:#111119;filter:brightness(.96)}
+figcaption{color:var(--muted-2);font-size:13px;line-height:1.5;margin-top:10px;text-align:center}
+.cover img{border-radius:var(--radius)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.duo img{border-radius:var(--radius-sm)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:32px 0}
+.trio figure{margin:0}
+.trio figcaption{font-size:11.5px;margin-top:7px}
+.trio img{border-radius:12px}
 
-  .foot{color:var(--muted);font-size:13px;text-align:center;margin-top:24px}
+/* стекло: только блок цен, только блок вариантов, только финал */
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px}
 
-  .author{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:15px;margin:8px 0 0}
-  .author strong{color:var(--ink)}
+.pricebox{margin:28px 0}
+.pricebox .row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  padding:13px 0;border-bottom:1px solid var(--line)}
+.pricebox .row:last-child{border-bottom:none;padding-bottom:0}
+.pricebox .row:first-child{padding-top:0}
+.pricebox .src{color:var(--muted);font-size:15.5px}
+.pricebox .val{font-family:"Manrope",sans-serif;font-weight:800;font-size:21px;color:var(--text-strong);white-space:nowrap}
+.pricebox .row.win .src{color:var(--text-strong)}
+.pricebox .row.win .val{color:var(--accent)}
+
+/* блок про трансфер и прочие акценты внутри текста */
+.note{border-left:2px solid var(--accent-line);padding-left:16px;margin:28px 0;color:var(--text)}
+.note strong{display:block;margin-bottom:6px}
+
+/* ===================================================================
+   LIFE EXPERIENCE
+   =================================================================== */
+.le-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0 34px}
+.le-card{position:relative;text-align:left;padding:0;border:none;background:none;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;display:block;width:100%}
+.le-shot{display:block;position:relative;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--line);
+  background:#12131b;aspect-ratio:1/1;transition:transform .4s var(--ease),border-color .4s}
+.le-shot img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:brightness(.94);
+  transition:filter .4s var(--ease)}
+/* нижний край карточки растворяется в фоне, чтобы обрезанная строка не бросалась в глаза */
+.le-shot::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(11,12,18,0) 0%,rgba(11,12,18,.55) 55%,var(--bg) 100%)}
+.le-card:hover .le-shot{transform:translateY(-3px);border-color:var(--line-strong)}
+.le-card:hover .le-shot img{filter:brightness(1)}
+.le-zoom{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:9px;display:grid;
+  place-items:center;background:rgba(10,10,16,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.18)}
+.le-zoom svg{width:15px;height:15px;color:#fff}
+.le-name{display:block;font-family:"Manrope",sans-serif;font-weight:700;font-size:15.5px;
+  color:var(--text-strong);margin:11px 0 2px;line-height:1.3}
+.le-meta{display:block;font-size:13px;color:var(--muted);line-height:1.45}
+.le-meta b{color:var(--accent);font-weight:600}
+.le-ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;
+  background:linear-gradient(160deg,#14141d,#0c0c12);color:var(--muted-2);font-size:12px;line-height:1.5}
+
+/* полноэкранный просмотр */
+.lb{position:fixed;inset:0;z-index:100;display:none;background:rgba(6,6,10,.94);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.lb.on{display:grid;grid-template-rows:auto 1fr auto}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:max(14px,env(safe-area-inset-top)) 16px 10px}
+.lb-title{font-family:"Manrope",sans-serif;font-weight:700;font-size:16px;color:var(--text-strong)}
+.lb-title span{display:block;font-family:"Inter",sans-serif;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:2px}
+.lb-close{width:38px;height:38px;flex:none;border-radius:11px;border:1px solid var(--line-strong);
+  background:var(--glass-2);color:var(--text-strong);font-size:20px;line-height:1;cursor:pointer}
+.lb-stage{position:relative;overflow:hidden;display:grid;place-items:center;padding:0 14px}
+.lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;
+  border-radius:14px;border:1px solid var(--line)}
+.lb-foot{display:flex;align-items:center;justify-content:center;gap:16px;
+  padding:12px 16px max(16px,env(safe-area-inset-bottom))}
+.lb-dots{display:flex;gap:7px}
+.lb-dots i{width:7px;height:7px;border-radius:50%;background:var(--line-strong);transition:background .3s,width .3s}
+.lb-dots i.on{background:var(--accent);width:20px;border-radius:4px}
+.lb-nav{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-strong);background:var(--glass-2);
+  color:var(--text-strong);display:grid;place-items:center;cursor:pointer}
+.lb-nav svg{width:18px;height:18px}
+.lb-hint{text-align:center;color:var(--muted-2);font-size:12px;padding:0 16px 4px}
+body.locked{overflow:hidden}
+
+/* ===================================================================
+   ВАРИАНТЫ ГОДА
+   =================================================================== */
+.paths{display:grid;gap:14px;margin:30px 0}
+.path{padding:22px}
+.path .tag{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2)}
+.path h3{margin:8px 0 12px;font-size:18px}
+.path .cost{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.path .cost b{color:var(--text-strong);font-weight:600}
+.path.win{border-color:var(--accent-line);background:linear-gradient(160deg,var(--accent-weak),var(--glass) 62%)}
+.path.win .tag{color:var(--accent)}
+
+/* ===================================================================
+   КНОПКА
+   =================================================================== */
+.cta{margin:44px 0 8px}
+.btn{display:flex;align-items:center;justify-content:center;gap:11px;width:100%;
+  padding:19px 24px;border-radius:15px;border:none;background:var(--accent);color:var(--accent-ink);
+  font-family:"Manrope",sans-serif;font-size:16.5px;font-weight:700;text-decoration:none;cursor:pointer;
+  transition:transform .3s var(--ease),background .3s}
+.btn:hover{transform:translateY(-2px);background:#7b8bff}
+.btn:active{transform:translateY(0)}
+.btn svg{width:20px;height:20px;flex:none}
+.cta-note{text-align:center;color:var(--muted-2);font-size:13.5px;margin-top:14px}
+
+.final{margin-top:34px;padding:24px}
+.final h3{margin-top:0}
+
+.foot{text-align:center;color:var(--muted-2);font-size:13px;margin-top:40px;line-height:1.7}
+.foot b{color:var(--muted);font-weight:600}
+
+/* мягкое появление только для картинок и карточек.
+   Прячем элемент только если скрипт запустился, иначе контент всегда виден. */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:400px){
+  body{font-size:17px}
+  .wrap{padding-left:16px;padding-right:16px}
+  .le-grid{gap:10px}
+  .glass,.path,.final{padding:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
+<div class="bg" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
 <main class="wrap">
 
-  <div class="hero">
-    <span class="kicker">✈️ Ниша туризма · Как это устроено · за 12 минут</span>
+  <!-- ── ШАПКА ──────────────────────────────────────────────────── -->
+  <header class="hero">
     <h1>Как зарабатывать на том, на что люди тратят деньги каждый день</h1>
-    <p class="lead"><em>Короткий гайд для тех, кто ищет новый источник дохода и возможность работать удалённо</em></p>
+    <p class="hero-sub">Манифест свободного человека</p>
+    <p class="hero-time">Время чтения около 12 минут</p>
 
-    <figure class="cover">
+    <figure class="cover reveal" style="margin-top:0">
       <img src="images/01-cover.jpeg" alt="Дмитрий Власов" loading="eager">
     </figure>
 
-    <p class="author"><strong>Дмитрий Власов</strong> • @dellioner</p>
-    <p><em>13 лет в онлайн-бизнесе и network marketing. БАДы. Арбитраж трафика. Партнёрки. Сейчас - туризм.</em></p>
-  </div>
-
-  <p>Нас с детства учат одному: получи профессию, найди работу, работай за зарплату. Другого пути нам просто не показывали. Не потому что его нет, а потому что его не знали те, кто нас учил.</p>
-
-  <p>Модель, которой я занимаюсь, многие всерьёз не воспринимают. А несколько дней назад один из партнёров показал, как за год сделал в ней $400 000. Это его личный результат, а не обещание дохода. Как это устроено, разберём дальше.</p>
-
-  <div class="callout coral">
-    <p style="margin:0"><strong>Сразу честно:</strong> это не гайд «брось всё и катайся по миру». Это про то, как зарабатывать на том, что люди и так делают каждый день — путешествуют. А заодно — самому ездить  выгоднее.</p>
-  </div>
-
-  <div class="callout accent">
-    <p style="margin:0;font-size:19px"><strong>Поздравляю! 🥳</strong></p>
-    <p style="margin:6px 0 0;font-size:18px"><strong>Ты читаешь это одним из первых</strong></p>
-    <p style="margin:12px 0 0">В мире 50 миллионов человек уже живут так: работают удалённо, путешествуют постоянно, не привязаны ни к офису, ни к одной стране. А большинство смотрит на них со стороны и не понимает — как они вообще так смогли.</p>
-  </div>
-
-  <p><strong>Это документ на 12 минут, который покажет тебе 3 вещи:</strong></p>
-  <ul>
-    <li>💸 Куда уходят деньги при каждом бронировании отеля — и как ты на этом можешь заработать</li>
-    <li>📈 Почему туризм в 2026 году — это то же, что было с рынком недвижимости в начале нулевых</li>
-    <li>🌍 Как использовать окно возможностей в нише туризма и работать из любой точки мира</li> 
-  </ul>
-  <p><strong>Если почувствуешь, что тебе эта тема нравится и захочешь поговорить лично — я внизу оставил инструкцию</strong></p>
-  <p>Поехали.</p>
-
-  <hr>
-
-  <div class="section-top">
-    <span class="kicker">Часть 1</span>
-    <h2>Туризм. Три цифры, которые меняют взгляд на рынок</h2>
-  </div>
-
-  <div class="stats">
-    <div class="stat">
-      <div class="num">$11 трлн</div>
-      <div class="lbl">Это объём мирового туристического рынка. Больше, чем ВВП США. Больше, чем рынок косметики, БАДов, фитнеса и онлайн-образования вместе взятых.</div>
+    <div class="author">
+      <div class="n">Дмитрий Власов · @dellioner</div>
+      <div class="d">13 лет в онлайн-бизнесе и network marketing. Очень люблю путешествовать</div>
     </div>
-    <div class="stat">
-      <div class="num">+47%</div>
-      <div class="lbl">Среднегодовой рост после пандемии. Люди не вернулись к путешествиям. Они начали путешествовать чаще, дольше и дороже.</div>
+  </header>
+
+  <!-- ── ВХОД ───────────────────────────────────────────────────── -->
+  <section class="lead-block">
+    <p>Нас с детства учат одному: получи профессию, найди работу, работай за зарплату. Другого пути нам просто не показывали. Не потому что его нет, а потому что его не знали те, кто нас учил.</p>
+
+    <p>Модель, которой я занимаюсь, многие всерьёз не воспринимают. И зря. Несколько дней назад один из партнёров показал, как за год сделал в ней $400 000. Это его личный результат, а не обещание дохода. Но он показывает, какой у этой модели потенциал.</p>
+
+    <p>Дальше я расскажу, что это за модель, почему я выбрал именно её после тринадцати лет в других направлениях, и как она устроена внутри.</p>
+  </section>
+
+  <!-- ── ЧАСТЬ 1 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 1</span>
+    <h2>Откуда я начинал</h2>
+
+    <p>Тринадцать лет назад я работал в гидрометцентре. Каждый день объезжал по два десятка точек в городе и собирал пробы воздуха. 12 000 рублей в месяц.</p>
+
+    <figure class="reveal">
+      <img src="images/02-driver-2011.png" alt="2011 год" loading="lazy">
+      <figcaption>2011 год</figcaption>
+    </figure>
+
+    <p>Меня уволили в один день. На руках осталась примерно тысяча рублей и кредит за машину.</p>
+
+    <figure class="reveal">
+      <img src="images/03-trip-2013.png" alt="2013 год, одна из командировок" loading="lazy">
+      <figcaption>2013 год, одна из командировок. Через несколько месяцев после этого фото меня уволили</figcaption>
+    </figure>
+
+    <p>Я тогда не думал ни про какой бизнес. Я думал, как дожить до конца месяца и чем закрывать кредит.</p>
+
+    <p>Через какое-то время знакомый посчитал мне на бумажке простую вещь. Я назвал, чего хочу: квартиру, машину, нормальный ремонт, возможность путешествовать. Он посчитал это в моих зарплатах.</p>
+
+    <p><strong>Вышло 200 лет.</strong></p>
+
+    <p>Сначала стало смешно. Потом грустно. Потому что цифра была честная. И в этот момент в голове щёлкнуло: работа в найме картину не изменит. Никогда.</p>
+
+    <p>Дело было не в том, что я мало работаю. Дело в системе, в которой я находился. Она физически не могла дать мне то, что я хотел. Хоть по двадцать часов в ней сиди.</p>
+
+    <p>Через год после того разговора я заработал первые два миллиона рублей и первый раз в жизни вылетел за границу.</p>
+
+    <figure class="reveal">
+      <div class="duo">
+        <img src="images/04-bernabeu-1.png" alt="Мадрид, 2014 год" loading="lazy">
+        <img src="images/05-bernabeu-2.png" alt="Мадрид, 2014 год" loading="lazy">
+      </div>
+      <figcaption>Мадрид, 2014 год</figcaption>
+    </figure>
+  </section>
+
+  <!-- ── ЧАСТЬ 2 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 2</span>
+    <h2>Что я пробовал до туризма</h2>
+
+    <p>С 2013 года я в онлайн-бизнесе и network marketing. За это время прошёл несколько направлений, и в каждом зарабатывал. Расскажу коротко, почему ушёл.</p>
+
+    <p><strong>БАДы.</strong> Деньги были. Но мне не нравится разговаривать с людьми про болезни, а ещё больше не нравится, когда коллеги преувеличивают свойства продукта. Недавно видел, как человек в соцсетях писал, что их продукт вылечил рак. Я не хочу стоять рядом с такими людьми, даже если продукт нормальный.</p>
+
+    <p><strong>Арбитраж трафика и крипта.</strong> Тоже зарабатывал. И тоже упёрся в одно: это работа, а не система. Перестаёте крутить педали, деньги останавливаются в тот же день. Один раз ошиблись с алгоритмом или попали в просадку рынка, и месяцы накоплений уходят.</p>
+
+    <p>Ни одно из этих направлений не давало главного: дохода, который не зависит от того, встал я сегодня с той ноги или нет. И к 2024 году я чётко понимал, что ищу. Мне нужна была модель, где я занимаюсь одним делом, а всё остальное кто-то уже построил до меня.</p>
+  </section>
+
+  <!-- ── ЧАСТЬ 3 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 3</span>
+    <h2>Какую модель я в итоге выбрал</h2>
+
+    <p>Я не строю свою компанию. Я специально выбрал модель, в которой компания работает на меня.</p>
+
+    <p>Продукт разработан, договоры с отелями и авиакомпаниями подписаны, лицензии получены, платежи и поддержка работают, юридическая часть закрыта. Всё это построено до меня и без меня. Я мог бы строить это сам, но тогда получил бы офис, сотрудников, отчётность и все риски, которые к этому прилагаются. И потерял бы годы.</p>
+
+    <p>Моя зона ответственности другая: делиться информацией о продукте и возможностях клуба, а потом обучать и поддерживать тех, кто пришёл, пока они не станут самостоятельными профессионалами. Всё.</p>
+
+    <p>Мне не нужен офис, склад, сотрудники и бухгалтер. Именно поэтому я работаю с телефона и не привязан к стране.</p>
+
+    <p>Это полностью белый, прогнозируемый бизнес с международной инфраструктурой за спиной. И у него нет верхней границы: ни по доходу, ни по географии. Команда растёт в любой стране, где работает компания.</p>
+
+    <p>А туризм я выбрал, потому что сам обожаю путешествовать и знаю, сколько людей готовы тратить на это деньги. Люди ездят без меня, каждый год, независимо от кризисов и моего настроения.</p>
+
+    <p>Мировой туристический рынок это порядка 11 триллионов долларов, и на нём работает примерно двадцать серьёзных партнёрских компаний. В косметике таких компаний больше двух тысяч, в БАДах больше тысячи. Разница в конкуренции на порядки.</p>
+
+    <p>Дальше покажу на цифрах, а не на словах.</p>
+  </section>
+
+  <!-- ── ЧАСТЬ 4 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 4</span>
+    <h2>Доказательство первое: обычный отель</h2>
+
+    <p>Моя последняя поездка. Отель Sensitive Premium Resort &amp; Spa, 4 ночи, с 23 по 27 апреля.</p>
+
+    <figure class="reveal">
+      <img src="images/06-booking.jpeg" alt="Моё фактическое бронирование" loading="lazy">
+      <figcaption>Моё фактическое бронирование, $333</figcaption>
+    </figure>
+
+    <p>Я заплатил $333. На других сайтах в те же даты было около $560.</p>
+
+    <p>Посмотрим цену на тот же отель и те же даты сегодня:</p>
+
+    <div class="glass pricebox">
+      <div class="row"><span class="src">Booking</span><span class="val">$1&nbsp;328</span></div>
+      <div class="row win"><span class="src">Наша платформа</span><span class="val">$729</span></div>
+      <div class="row"><span class="src">Сайт отеля</span><span class="val">$1&nbsp;022</span></div>
     </div>
-    <div class="stat">
-      <div class="num">50 млн</div>
-      <div class="lbl">Столько в мире цифровых кочевников. К 2030 году будет 100 миллионов. Каждый из них покупает отели, перелёты, страховки. Постоянно.</div>
+
+    <div class="trio reveal">
+      <figure>
+        <img src="images/07-mwr-price.jpeg" alt="Цена на Booking" loading="lazy">
+        <figcaption>Booking · $1&nbsp;328</figcaption>
+      </figure>
+      <figure>
+        <img src="images/08-hotel-site.jpeg" alt="Цена на нашей платформе" loading="lazy">
+        <figcaption>Наша платформа · $729</figcaption>
+      </figure>
+      <figure>
+        <img src="images/09-savings.jpeg" alt="Цена на сайте отеля" loading="lazy">
+        <figcaption>Сайт отеля · $1&nbsp;022</figcaption>
+      </figure>
     </div>
-  </div>
 
-  <p>Теперь представь рынок размером <strong>в 11 триллионов,</strong> на котором работает примерно двадцать серьёзных партнёрских компаний.</p>
-  <p>В косметической сфере таких компаний — <strong>больше двух тысяч.</strong></p>
-  <p>В БАДах — <strong>больше тысячи.</strong></p>
-  <p>Соотношение <strong>«рынок и конкуренция»</strong> в туризме ниже в десятки раз.</p>
-  <p>Это математика — открой любой отчёт по индустрии и проверь сам. Но цифры — только половина истории. <strong>Главное — почему именно сейчас, а не через год.</strong></p>
+    <p>Разница с Booking почти $600 за одну поездку. С сайтом отеля около $300.</p>
 
-  <hr>
-
-  <div class="section-top">
-    <span class="kicker">Часть 2</span>
-    <h2>Почему начинать нужно сейчас</h2>
-  </div>
-
-  <p><em>Окно входа в новую нишу всегда короткое. Рынок недвижимости в начале нулевых. Кто зашёл тогда как частный инвестор или агент — построил капитал. Кто зашёл в 2020-м — конкурирует с гигантами и работает за копейки.</em></p>
-
-  <p>В туризме сошлись четыре фактора. Не я их придумал — они работают сейчас.</p>
-
-  <h3><span class="num">01</span>После пандемии люди перестали откладывать</h3>
-  <p>Поколение, которое копило на старость, сейчас наоборот тратит деньги на впечатления. <strong>«Когда-нибудь потом»</strong> больше не актуально. Актуально — жить сейчас.</p>
-
-  <h3><span class="num">02</span>Удалённая работа стала нормой</h3>
-  <p>50 миллионов человек уже работают откуда угодно. Им нужны <strong>отели, виллы, авиабилеты, eSim</strong> каждый месяц, а не раз в год.</p>
-
-  <h3><span class="num">03</span>Соцсети сделали путешествие валютой</h3>
-  <p>Поездка — это больше не отпуск. Это статус. Контент. Социальное доказательство. Спрос на «красивые места» удваивается постоянно.</p>
-
-  <h3><span class="num">04</span>FOMO работает как никогда сильно</h3>
-  <p>Один друг летит на Бали — десять других хотят тоже. Это та же механика, по которой растут любые сообщества и клубы по интересам.</p>
-
-  <p>По прогнозам аналитиков, этому росту нужно ещё 5–7 лет до пика. Через два года рынок начнёт переполняться. Через пять — он будет таким же зрелым, как сегодняшний рынок недвижимости.</p>
-
-  <div class="callout sky">
-    <strong>Сейчас — последнее окно.</strong> И прежде чем ты решишь, что я это придумал — расскажу, откуда я вообще это знаю.
-  </div>
-
-  <hr>
-
-  <div class="section-top">
-    <span class="kicker">Часть 3</span>
-    <h2>Откуда я знаю, что говорю</h2>
-  </div>
-
-  <p><em>Тринадцать лет назад я работал водителем за 12 000 рублей в месяц.</em></p>
-
-  <figure>
-    <img src="images/02-driver-2011.png" alt="Фото 2011 года" loading="lazy">
-    <figcaption>Фото 2011 года, такой вот я был счастливый парень</figcaption>
-  </figure>
-
-  <p>Меня уволили.</p>
-  <p>На руках осталось около тысячи рублей и кредит за машину.</p>
-
-  <figure>
-    <img src="images/03-trip-2013.png" alt="Командировка 2013" loading="lazy">
-    <figcaption>А это фото 2013 года, одна из командировок! Кстати, через несколько месяцев спустя меня уволили</figcaption>
-  </figure>
-
-  <p>Знакомый, который был в бизнесе посчитал на бумажке мою жизнь:<br>
-  Я хочу — квартиру, машину, ремонт, путешествия.<br>
-  <strong>И оказалось, что с моей зарплатой мне работать 200 лет</strong></p>
-
-  <blockquote><strong>Я тогда понял одну вещь:</strong><br><em>Проблема не в том, что ты мало зарабатываешь. Проблема в том, что ты находишься в системе, которая физически не позволит тебе зарабатывать достаточно. Сколько ни старайся.</em></blockquote>
-
-  <p>Через год после того разговора я заработал первые два миллиона рублей. Первый раз вылетел за границу — Египет, потом Мадрид, стадион Бернабеу.</p>
-
-  <div class="gallery cols-2">
-    <figure>
-      <img src="images/04-bernabeu-1.png" alt="Стадион Бернабеу" loading="lazy">
-      <figcaption>Стадион Сантьяго Бернабеу, Мадрид 2014 год</figcaption>
-    </figure>
-    <figure>
-      <img src="images/05-bernabeu-2.png" alt="Стадион Бернабеу" loading="lazy">
-      <figcaption>Стадион Сантьяго Бернабеу, Мадрид 2014 год</figcaption>
-    </figure>
-  </div>
-
-  <p>С 2013 года я в онлайн-бизнесе и network marketing. Успел поработать в разных направлениях: БАДы, партнёрские программы, арбитраж. Везде зарабатывал и везде упирался в одно и то же. Либо продукт, о котором мне неинтересно говорить, либо работа, которая останавливается ровно в тот день, когда ты перестаёшь крутить педали.</p>
-
-  <p>Туризм оказался первым направлением за 13 лет, в котором сошлось всё сразу: растущий рынок, продукт, которым люди пользуются и без меня, и понятный порог входа.</p>
-
-  <p>И тут важный момент, который многие понимают неправильно. Я не строю свою компанию. Я сознательно выбрал модель, в которой компания работает на меня. Продукт разработан, договоры с отелями и авиакомпаниями подписаны, лицензии получены, платежи и поддержка работают, юридическая часть закрыта. Это всё построено до меня и без меня.</p>
-
-  <p>Моя зона ответственности другая: приводить людей и выстраивать команду. Всё. Именно поэтому я работаю с телефона и не привязан к стране. Мне не нужен офис, склад, сотрудники и бухгалтер. Я не потерял в доходе от такого выбора, я выиграл во времени и в свободе.</p>
-
-  <p>Я прошел несколько направлений и смело могу сказать, что есть: <strong>тренды, ёмкость рынка, спрос на продукт и его ценность для потребителя, а так же скорость и финансовый порог входа в нишу</strong>!</p>
-
-  <p>А чтобы это не звучало как теория — покажу на цифрах своей последней поездки.</p>
-
-  <hr>
-
-  <div class="section-top">
-    <span class="kicker">Часть 4</span>
-    <h2>Мой опыт бронирования отеля. Цифры из моего приложения</h2>
-  </div>
-
-  <p>Дальше показываю свой опыт — моя последняя поездка.</p>
-
-  <div class="callout">
-    <p style="margin:0"><strong>Отель Sensitive Premium Resort & Spa.</strong></p>
-    <p style="margin:6px 0 0">4 ночи, 5 дней. с 23 апреля по 27 апреля</p>
-    <p style="margin:12px 0 0"><em>Цена, по которой я поехал через наш сервис: <strong>$333</strong>, на других сайтах цена была ~$560 в эти же даты, разница ~$220 (скриншоты не делал)</em></p>
-  </div>
-
-  <figure>
-    <img src="images/06-booking.jpeg" alt="Моё бронирование за $333" loading="lazy">
-    <figcaption>Моё фактическое бронирование — итоговая цена $333</figcaption>
-  </figure>
-
-  <h3>Давай посмотрим цену сегодня <span style="color:var(--muted);font-weight:500;font-size:.8em">(16.05.26)</span></h3>
-
-  <div class="price">
-    <div class="row"><div class="src">Booking</div><div class="val">$1 328</div></div>
-    <div class="row win"><div class="src">Наша платформа</div><div class="val">$729</div></div>
-    <div class="row"><div class="src">Сайт отеля</div><div class="val">$1 022</div></div>
-  </div>
-
-  <p style="color:var(--muted);font-size:14px;text-align:center;margin-top:18px">📸 Скриншоты из приложений — те же даты, тот же отель:</p>
-  <div class="gallery cols-3">
-    <figure>
-      <img src="images/07-mwr-price.jpeg" alt="Цена на Booking" loading="lazy">
-      <figcaption>Booking · $1 328</figcaption>
-    </figure>
-    <figure>
-      <img src="images/08-hotel-site.jpeg" alt="Цена на нашей платформе" loading="lazy">
-      <figcaption>Наша платформа · $729</figcaption>
-    </figure>
-    <figure>
-      <img src="images/09-savings.jpeg" alt="Цена на сайте отеля" loading="lazy">
-      <figcaption>Сайт отеля · $1 022</figcaption>
-    </figure>
-  </div>
-
-  <div class="callout accent">
-    <p style="margin:0"><strong>Выгода:</strong></p>
-    <p style="margin:8px 0 0">💰 <strong>$599</strong> за одну поездку — относительно Booking</p>
-    <p style="margin:6px 0 0">💰 <strong>$293</strong> за одну поездку — относительно сайта отеля</p>
-  </div>
-
-  <h3>🚕 Трансфер из аэропорта</h3>
-  <p>Стандартный заказ такси выходил: <strong>$92</strong>. Через сервис, VIP-трансфер: <strong>$44</strong></p>
-
-  <figure>
-    <img src="images/10-transfer.jpeg" alt="VIP-трансфер" loading="lazy">
-    <figcaption>VIP-трансфер из аэропорта — $44 вместо $92</figcaption>
-  </figure>
-
-  <p>Мы ехали в 2-ем, были напитки, Wi-Fi, музыка и максимально откинутые кресла, после перелета самый кайф!</p>
-
-  <p>Когда человек один раз так едет — он перестаёт открывать Booking. Не потому что я его «убедил», а потому что он увидел разницу в цифрах своими глазами.</p>
-
-  <blockquote>
-    <p style="margin:0">Я показал эту поездку не для того, чтобы позвать тебя ехать дешевле. Я показал её, чтобы ты понял, с каким продуктом человек выходит к людям, когда заходит в это направление.</p>
-    <p style="margin:12px 0 0">Отели это вообще самая простая часть. На платформе есть собственные туры компании, клубные виллы, круизы, аренда авто и трансферы, аутлет брендов, планировщик маршрутов на искусственном интеллекте. Есть поездки, которые обычное турагентство тебе просто не продаст: Неделя моды в Париже, Формула 1 по системе всё включено, Тибет. Разбор этих направлений я выкладываю в канале, здесь на них не хватит места.</p>
-    <p style="margin:12px 0 0">И вот когда ты видишь весь этот объём, вопрос меняется. Уже не «а стоит ли мне поехать дешевле», а «что можно построить, стоя рядом с таким продуктом». А построить на нём можно команду, устойчивый источник дохода и бизнес, который не заканчивается вместе с твоим отпуском.</p>
-  </blockquote>
-
-  <div class="callout coral">
-    <p style="margin:0">Сейчас ты можешь сказать: <strong>«да какие мне путешествия»</strong> — и назвать свою причину, почему это не для тебя. Понимаю.</p>
-    <p style="margin:12px 0 0">Но посмотри на всё это иначе: не как на отпуск, а как на инструмент. Ты не продаёшь поездки — ты помогаешь людям, которые <strong>и так путешествуют</strong>, делать это выгоднее. И зарабатываешь на этом.</p>
-    <p style="margin:12px 0 0">А кто-то благодаря тебе вообще <strong>впервые в жизни летит за границу</strong>. Вот это уже не про чемоданы. Это про другую жизнь — твою и чужую.</p>
-  </div>
-
-  <div class="cta-inline">
-    <p>Уже захотелось так же? Можно начать с малого — заглянуть в канал и посмотреть кейсы. А захочешь разобрать свою ситуацию — просто напиши мне.</p>
-    <div class="btns">
-      <a class="btn btn-secondary" href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">📺 Посмотреть канал</a>
-      <a class="btn btn-primary" href="https://t.me/dellioner" target="_blank" rel="noopener">💬 Написать лично</a>
+    <div class="note">
+      <strong>Трансфер из аэропорта.</strong>
+      Обычное такси выходило $92. Через платформу VIP-трансфер обошёлся в $44. Ехали вдвоём, напитки, Wi-Fi, музыка, откинутые кресла. После перелёта это отдельное удовольствие.
     </div>
-  </div>
 
-  <p>Теперь — про компанию, которая это делает.</p>
+    <figure class="reveal">
+      <img src="images/10-transfer.jpeg" alt="VIP-трансфер из аэропорта" loading="lazy">
+      <figcaption>VIP-трансфер из аэропорта, $44 вместо $92</figcaption>
+    </figure>
 
-  <hr>
+    <p>Тот, кто один раз так съездил, перестаёт открывать Booking. Он просто увидел разницу своими глазами.</p>
 
-  <div class="section-top">
-    <span class="kicker">Часть 5</span>
-    <h2>Компания MWR Life</h2>
-  </div>
+    <p>Я показываю это не для того, чтобы позвать вас путешествовать выгоднее. Это и так понятно. Я показываю, с каким продуктом человек работает в этом направлении.</p>
+  </section>
 
-  <ul>
-    <li>🌐 13 лет на международном рынке.</li>
-    <li>📈 Оборот за 1 год вырос с <strong>$75 млн до $118 млн</strong> (по данным Business For Home).</li>
-    <li>👥 Больше <strong>600 000 клиентов</strong> в мире.</li>
-    <li>📑 Все необходимые туристические лицензии.</li>
-    <li>🌍 Продолжает открытие в новых регионах.</li>
-  </ul>
+  <!-- ── ЧАСТЬ 5 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 5</span>
+    <h2>Доказательство второе: то, что не продаст турагентство</h2>
 
-  <p><strong>Продукт</strong> — закрытый клуб с платформой, на которой собрано более 2 000 000 отелей. Более <strong>14 направлений</strong> для путешественника: <strong>включая eSim, оформление виз и многое другое. Скидки до 80% от рыночных. Покрывает 99% потребностей путешественника.</strong></p>
+    <p>Отели это самый быстрый способ показать выгоду. Но это малая часть платформы.</p>
 
+    <p>Внутри больше пятнадцати направлений: авиабилеты, аренда авто, трансферы, круизы, eSIM, оформление виз, билеты на концерты и экскурсии, аутлет брендов, планировщик маршрутов на искусственном интеллекте. Всё, что нужно человеку в поездке, в одном месте. И собственные туры компании, ради которых люди остаются в клубе годами.</p>
 
-  <p>И самое интересное — не сама платформа. Интереснее то, как в этой модели работают деньги.</p>
+    <p>Сначала про баллы лояльности, иначе цифры ниже будут непонятны. Внутри клуба есть баллы, где один балл равен одному доллару. Они начисляются участникам, и ими можно закрыть часть стоимости поездки. У каждого направления свой лимит, сколько баллов разрешено списать.</p>
 
-  <hr>
+    <p>Теперь смотрите.</p>
 
-  <div class="section-top">
-    <span class="kicker">Часть 6</span>
+    <div class="le-grid" id="le-grid"></div>
+    <p class="cta-note" style="margin:-20px 0 34px">Нажмите на карточку, чтобы посмотреть её целиком и список включений</p>
+
+    <h3>Yerevan</h3>
+    <p class="le-meta" style="margin:0 0 12px">6 дней, 5 ночей · 9-14 сентября 2026</p>
+    <p>Отель «Красный мост» в Ереване, завтраки, групповые трансферы. Пешеходная экскурсия по городу, озеро Севан и монастырь Севанаванк, Дилижан, монастырь Агарцин, озеро Парз, монастыри Хор Вирап, Нораванк и Арени. Экскурсии с русскоязычным гидом, транспорт, аудиогарнитура, два обеда. Плюс один полный день бизнес-тренинга по лидерству.</p>
+    <p><strong>Цена $699 на человека. Списать можно до 250 баллов.</strong></p>
+
+    <h3>Dagestan</h3>
+    <p class="le-meta" style="margin:0 0 12px">6 дней, 5 ночей · 16-21 августа 2026</p>
+    <p>Трансферы, проживание, завтраки, три обеда, транспорт на всю программу, доступ в конференц-зал. Каньон Сулак, Махачкала, Дербент, входные билеты везде включены.</p>
+    <p><strong>Цена $999 на человека. Списать можно до 300 баллов.</strong></p>
+
+    <h3>Paris Fashion Week</h3>
+    <p class="le-meta" style="margin:0 0 12px">5 дней, 4 ночи · 1-5 октября 2026</p>
+    <p>Hyatt Regency Paris Étoile, номер делюкс, завтраки, городские налоги. Золотое место в театре Лидо с ужином. Вход на подиум Недели моды в Париже.</p>
+    <p><strong>Цена $1 399 на человека. Списать можно до 900 баллов.</strong><br>То есть деньгами это выходит около $500.</p>
+
+    <h3>Baku Formula 1</h3>
+    <p class="le-meta" style="margin:0 0 12px">5 дней, 4 ночи · 23-27 сентября 2026</p>
+    <p>Wyndham Hotel Baku, завтраки, билеты на Формулу-1 на городской трассе Баку, доступ к гонкам, концертам и всем мероприятиям гоночного уикенда.</p>
+    <p><strong>Цена $1 499 на человека. Списать можно до 750 баллов.</strong></p>
+
+    <h3>Ferrari</h3>
+    <p class="le-meta" style="margin:0 0 12px">4 дня, 3 ночи · 17-20 октября 2026, Италия</p>
+    <p>The Social Hub Florence Lavagnini, завтраки. Инструктаж и работа с профессиональным коучем. Три круга за рулём Ferrari 296 в качестве водителя. VIP-зал с видом на пит-лейн, открытый бар и кейтеринг, гоночный симулятор, профессиональная фото- и видеосъёмка, страховка. Шины, топливо и заезды уже в стоимости.</p>
+    <p><strong>Цена $1 799 на человека. Списать можно до 900 баллов.</strong></p>
+
+    <h3>Tibet</h3>
+    <p class="le-meta" style="margin:0 0 12px">15 дней, 14 ночей · 20 августа - 3 сентября 2026</p>
+    <p>Отели по всему маршруту, завтраки, 11 обедов, трансферы, гид с русским языком, транспорт с кондиционером, входные билеты на все объекты, проездной в Тибет и все необходимые разрешения. Трёхдневный поход к Кайлаш-Кора, перевозка багажа на яках, портативный кислородный баллон, вода, все налоги.</p>
+    <p><strong>Цена $2 999 на человека. Списать можно до 900 баллов.</strong></p>
+
+    <p style="margin-top:34px">Найдите такие поездки в обычном турагентстве. Их там нет. Туда попадают либо по связям, либо через клуб, и мест на каждое направление ограниченное количество.</p>
+
+    <p>И это только то, что я успел показать. В календаре есть направления по США и Европе, Япония, Южная Корея, круизы. Каждый месяц появляются новые.</p>
+
+    <p><strong>И ещё про кэшбэк, коротко.</strong> За покупки на платформе начисляются travel credits, и вот что в них главное. Обычно ваши кэшбэки размазаны по десяткам сайтов, и на каждом их можно потратить только внутри этого сайта. Часть вы не используете никогда. Здесь всё в одном месте: заплатили за отель, накопились баллы, закрыли ими авиабилет или покупку в аутлете. И закрыть можно вплоть до полной стоимости. Получается, что одна поездка частично оплачивает следующую.</p>
+
+    <p>Как именно это считается, я здесь расписывать не буду, это разговор на пятнадцать минут с калькулятором. Разберём лично, если вам будет интересно.</p>
+
+    <div class="cta">
+      <a class="btn" href="https://t.me/dellioner" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.86l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.14L18.1 6.4c.4-.36-.09-.56-.63-.2L7.28 12.6l-4.98-1.56c-1.08-.34-1.1-1.08.23-1.6l19.46-7.5c.9-.33 1.7.22 1.4 1.36z"/></svg>
+        Написать мне в Telegram
+      </a>
+    </div>
+  </section>
+
+  <!-- ── ЧАСТЬ 6 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 6</span>
+    <h2>Компания</h2>
+
+    <p>MWR Life, 13 лет на международном рынке. Оборот за год вырос с $75 млн до $118 млн по данным Business For Home. Больше 600 000 клиентов в мире. Все необходимые туристические лицензии. Продолжает открываться в новых регионах.</p>
+
+    <p>Продукт это закрытый клуб с собственной туристической платформой Travel Advantage. Больше 2 000 000 отелей и полтора десятка направлений внутри.</p>
+
+    <p>И здесь есть отличие, которое видно не сразу. Большинство компаний в этой нише работают на чужом движке: берут готовый сервис, ставят на него свой логотип и получают небольшую комиссию с каждого бронирования. У MWR Life свой туроператор. Отсюда и прямые договоры, и цены, которые невозможно повторить надстройкой над чужим сайтом.</p>
+
+    <p>Но интереснее не сама платформа. Интереснее то, как здесь устроены деньги.</p>
+  </section>
+
+  <!-- ── ЧАСТЬ 7 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 7</span>
     <h2>Как здесь работают деньги</h2>
-  </div>
 
-  <p><strong>Компания зарабатывает на трёх вещах:</strong></p>
+    <p><strong>Основной доход компании это клубное членство.</strong> Участники платят за доступ к платформе, и это даёт компании предсказуемую выручку каждый месяц. Именно поэтому наценка на самих бронированиях минимальная. Компания не зарабатывает на том, что накручивает цену на вашей поездке. Отсюда и берётся $333 вместо $560.</p>
 
-  <h3><span class="num">01</span>Клубное членство</h3>
-  <p>Основной доход компании это подписка участников клуба. Именно поэтому наценка на самих бронированиях минимальная, ровно такая, чтобы бизнес платил налоги и оставался прибыльным. Компания не зарабатывает на том, что накручивает цену на твоей поездке. Отсюда и берётся $333 вместо $560.</p>
+    <p><strong>И второе, самое важное для вас.</strong> Booking Holdings вложили $8,2 млрд в маркетинг за 2025 год, это около 30% всей выручки.</p>
 
-  <h3><span class="num">02</span>Минимальная маржа на бронированиях</h3>
-  <p>Небольшая наценка внутри цены есть, но она в разы ниже, чем у Booking, Expedia или Островка. Это не основной источник дохода компании, а рабочая часть экономики.</p>
+    <figure class="reveal">
+      <img src="images/16-booking-ads.png" alt="Booking Holdings вложили $8,2 млрд в маркетинг за 2025 год" loading="lazy">
+      <figcaption>Источник: PhocusWire</figcaption>
+    </figure>
 
-  <h3><span class="num">03</span>Экономия на рекламе</h3>
-  <p>Booking тратит миллиарды на Google, ТВ и баннеры.</p>
+    <p>MWR Life на рекламу не тратит. Вместо этого компания платит людям, которые приводят ей клиентов. Рассказали человеку, он стал клиентом компании, компания заплатила вам за факт привлечения.</p>
 
-  <figure>
-    <img src="images/16-booking-ads.png" alt="Booking Holdings тратит $8,2 млрд в год на маркетинг" loading="lazy">
-    <figcaption>Booking Holdings вложили <strong>$8,2 млрд</strong> в маркетинг за 2025 год — это ~30% всей выручки. Источник: PhocusWire</figcaption>
-  </figure>
+    <p>Это та же модель, по которой работают реферальные программы банков, страховых, Airbnb и Uber. Просто в туристической нише, с серьёзными комиссионными и понятной экономикой.</p>
 
-  <p><strong>MWR — не тратит деньги на рекламу.</strong> Вместо этого компания платит людям, которые приводят в неё новых клиентов.</p>
+    <p>И вот здесь появляется масштаб. Люди, которым вы рассказали, тоже могут рассказывать дальше. Не обязаны, но могут. Поэтому доход здесь не упирается в количество ваших личных часов, как в любой работе и фрилансе. Он зависит от того, сколько людей вокруг вас разобрались в теме и работают самостоятельно. Именно из-за этого в модели возможны суммы вроде тех $400 000 за год, с которых я начал.</p>
 
-  <div class="callout sky">
-    <p style="margin:0;font-size:18px"><strong>И вот тут начинается твоя часть</strong></p>
-    <p style="margin:10px 0 0">Когда ты приглашаешь человека — он становится клиентом компании. Компания платит тебе <strong>разовую реферальную выплату</strong> за то, что ты привёл ей клиента. Не процент с каждого его бронирования, а именно за факт привлечения. Это сокращает расходы на рекламу, ведь исключены «холостые» показы рекламы.</p>
-  </div>
+    <p>Точные цифры маркетинг-плана я на этой странице не разбираю. Их надо показывать на калькуляторе и под вашу ситуацию, иначе это просто набор чисел.</p>
+  </section>
 
-  <p><em>Это та же модель, по которой работают реферальные программы <strong>банков, страховых, Airbnb, Uber.</strong> Просто в туристической нише с серьёзными комиссионными и серьёзной экономикой за плечами.</em></p>
+  <!-- ── ЧАСТЬ 8 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 8</span>
+    <h2>Что вы получаете в команде</h2>
 
-  <p>Но компания и продукт — это одна сторона. Вторая — это команда, в которую ты приходишь!</p>
+    <p>Доступ к компании получает каждый, кто зарегистрировался. Вопрос в том, что происходит после регистрации.</p>
 
-  <hr>
+    <h3>Личная работа со мной</h3>
+    <p>Я работаю с каждым партнёром лично. Разбираем вашу ситуацию, вашу аудиторию, вашу стратегию. Не «поздравляю с регистрацией, дальше сами».</p>
 
-  <div class="section-top">
-    <span class="kicker">Часть 7</span>
-    <h2>Готовая система: команда «Первый класс»</h2>
-  </div>
+    <h3>Пошаговое обучение в Telegram</h3>
+    <p>Боты, воронки, видео-уроки. Выстроенная последовательность шагов, а не разрозненные сообщения в общих чатах.</p>
 
-  <p>Дальше — не абстрактные обещания, а конкретный набор: с чем именно ты заходишь и что у тебя есть с первого дня.</p>
+    <figure class="reveal">
+      <img src="images/12-tg-learning.jpeg" alt="Обучение в Telegram" loading="lazy">
+      <figcaption>Пошаговая обучающая система внутри Telegram</figcaption>
+    </figure>
 
-  <p>Не просто <strong>«доступ к компании»</strong>. Это получает каждый, кто зарегистрируется. А вот что у тебя появится именно в нашей команде:</p>
+    <h3>Выездные мероприятия</h3>
+    <p>В network marketing очень сильные офлайн-события, это одна из самых недооценённых сторон индустрии. Я был на сотне таких. Там даже убеждённые скептики разворачиваются и начинают строить команду.</p>
 
-  <h3><span class="num">01</span>Личная работа со мной как с наставником</h3>
-  <p>Я работаю с каждым партнёром лично. Разбираем твою ситуацию, твою аудиторию, твою стратегию. Регулярные созвоны и прямые эфиры каждое утро с обзором платформы. Не <strong>«поздравляю с регистрацией, теперь делай что хочешь»</strong></p>
+    <figure class="reveal">
+      <img src="images/13-events.jpeg" alt="Выездные мероприятия" loading="lazy">
+      <figcaption>Выездные тренинги и события</figcaption>
+    </figure>
 
-  <h3><span class="num">02</span>Пошаговая обучающая система внутри Telegram</h3>
-  <p>Чат-боты, воронки, видео-уроки от профессионалов. Не разрозненная информация в общих чатах — а выстроенная последовательность шагов.</p>
+    <h3>Среда, в которой невозможное становится обычным</h3>
+    <p>Это самая недооценённая часть, и скажу про неё честно. Человек меняется не от знаний. Он меняется от того, кто находится вокруг него каждый день.</p>
 
-  <figure>
-    <img src="images/12-tg-learning.jpeg" alt="Обучение в Telegram" loading="lazy">
-    <figcaption>Пошаговая обучающая система внутри Telegram</figcaption>
-  </figure>
+    <p>Когда вы каждое утро выходите на созвон с людьми, которые делают то, что вам пока кажется нереальным, через пару месяцев это перестаёт казаться нереальным. Вы видели вблизи, как это делается, и поняли, что магии там нет.</p>
 
-  <h3><span class="num">03</span>Выездные мероприятия и тренинги</h3>
-  <p>В индустрии network marketing очень мощные и яркие офлайн-события — это одна из её самых сильных сторон. Я сам был на сотне таких мероприятий. Это место, где даже заядлые скептики разворачиваются и начинают строить команду. Энергия, прокачка, новые знакомства, обмен опытом и многое другое. Так же знакомства с блогерами, предпринимателями и просто классными людьми</p>
+    <p>У нас пять дней в неделю идут онлайн-тренинги, на которых собирается от 400 до 1000 человек. Это не чат для новичков, где все молчат. Это живая структура, в которой в любой момент есть у кого спросить и с кого брать пример.</p>
 
-  <figure>
-    <img src="images/13-events.jpeg" alt="Выездные мероприятия" loading="lazy">
-    <figcaption>Выездные тренинги и события</figcaption>
-  </figure>
+    <figure class="reveal">
+      <img src="images/14-community.jpeg" alt="Сообщество «Первый класс»" loading="lazy">
+      <figcaption>Сообщество «Первый класс»</figcaption>
+    </figure>
 
-  <h3><span class="num">04</span>Среда, в которой невозможное становится обычным</h3>
-  <p>Это самая недооценённая часть, и я скажу про неё честно. Человек меняется не от знаний. Он меняется от того, кто вокруг него каждый день.</p>
-  <p>Когда ты каждое утро выходишь на созвон с людьми, которые делают то, что тебе пока кажется нереальным, через пару месяцев это перестаёт казаться нереальным. Не потому что тебя убедили, а потому что ты видел вблизи, как это делается, и понял, что там нет никакой магии.</p>
-  <p>У нас пять дней в неделю идут онлайн-тренинги, на которых собирается от 400 до 1000 человек. Это не чат для новичков, где все молчат. Это живая структура, в которой в любой момент есть у кого спросить и с кого брать пример.</p>
+    <h3>Путешествия как часть работы</h3>
+    <p>Вы сами пользуетесь тем, что предлагаете людям. Плюс клубные выезды команды. Туризм, наверное, единственный бизнес, который буквально оплачивает вам тот образ жизни, который вы показываете.</p>
 
-  <figure>
-    <img src="images/14-community.jpeg" alt="Команда" loading="lazy">
-    <figcaption>Сообщество «Первый класс»</figcaption>
-  </figure>
+    <h3>И деньги, если готовы поработать</h3>
+    <p>Это не быстрый заработок за неделю. Это работа на 3-12 месяцев с наставником, после которой появляется доход, меняющий уровень жизни. В команде есть с кого брать пример.</p>
+  </section>
 
-  <h3><span class="num">05</span>Путешествия</h3>
-  <p>Это и продукт, которым ты сам пользуешься (твои поездки за 50–80% от рыночной цены), и регулярные клубные выезды команды. Туризм — это, наверное, единственный бизнес в мире, который буквально оплачивает тебе образ жизни, который ты продаёшь.</p>
+  <!-- ── ЧАСТЬ 9 ────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Часть 9</span>
+    <h2>Три варианта вашего ближайшего года</h2>
 
-  <h3><span class="num">06</span>Реальные деньги — если ты готов поработать</h3>
-  <p>Это не быстрые деньги за неделю. Это работа на 3–12 месяцев с наставником, после которых появляется доход, реально меняющий жизнь. В команде уже есть с кого брать пример.</p>
+    <div class="paths">
+      <div class="glass path reveal">
+        <div class="tag">Вариант А</div>
+        <h3>Ничего не менять</h3>
+        <p>Скорее всего через год вы будете примерно в той же точке. Тот же доход, та же работа, те же мысли. Может быть, ещё одна попытка зайти в очередной онлайн-проект.</p>
+        <p>Я не пугаю, это самый частый сценарий, и он абсолютно нормальный, пока вас всё устраивает.</p>
+        <div class="cost">Цена: <b>год, который уже не повторится.</b></div>
+      </div>
 
-  <p><em>Сейчас у меня ещё есть время работать с каждым лично. По мере роста команды эта возможность будет уменьшаться. А дальше — твой ход. Покажу три варианта, как может выглядеть твой ближайший год.</em></p>
+      <div class="glass path reveal">
+        <div class="tag">Вариант Б</div>
+        <h3>Разбираться самому</h3>
+        <p>Заходите в нишу без наставника. Полгода уходит на ошибки, которые до вас уже совершили другие. Может выйдете в плюс, может нет.</p>
+        <div class="cost">Цена: <b>полгода времени и от 100 000 до 500 000 рублей</b> на тесты, которые часто ничего не дают.</div>
+      </div>
 
-  <div class="cta-inline">
-    <p>Чувствуешь, что это твоё? Тогда не откладывай — напиши, разберём твою ситуацию лично. Или понаблюдай в канале, если пока приглядываешься.</p>
-    <div class="btns">
-      <a class="btn btn-secondary" href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">📺 Посмотреть канал</a>
-      <a class="btn btn-primary" href="https://t.me/dellioner" target="_blank" rel="noopener">💬 Написать лично</a>
+      <div class="glass path win reveal">
+        <div class="tag">Вариант В</div>
+        <h3>Зайти с командой и системой</h3>
+        <p>Заходите в MWR Life вместе с командой «Первый класс». Получаете обучение, наставничество, готовые материалы. За 3-12 месяцев выходите на другой уровень дохода. И параллельно начинаете больше и выгоднее путешествовать.</p>
+        <div class="cost">Цена входа: <b>активация клубной карты.</b> Большая часть суммы сразу возвращается вам баллами лояльности, и потратить их можно на своё путешествие сразу после регистрации. Фактически вы заходите по стоимости ужина в ресторане, а остальное превращается в вашу первую поездку. Точные цифры разберём в разговоре.</div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <hr>
+  <!-- ── ФИНАЛ ──────────────────────────────────────────────────── -->
+  <section class="part">
+    <span class="eyebrow">Финал</span>
+    <h2>Если вы дочитали до этого места</h2>
 
-  <div class="section-top">
-    <span class="kicker">Часть 8</span>
-    <h2>Три сценария твоего ближайшего года</h2>
-  </div>
+    <p>Если вы дочитали до этого места, тема вас не отпускает. Так обычно и бывает.</p>
 
-  <div class="scenarios">
-    <div class="sc">
-      <div class="tag">Сценарий А</div>
-      <h3 style="margin-top:6px">Ничего не делать</h3>
-      <p>Скорее всего через год ты будешь примерно в той же точке. Тот же доход, та же работа, те же мысли. Может быть, ещё одна попытка зайти в очередной онлайн-проект.</p>
-      <p>Я не пугаю, это просто самый частый сценарий. И он абсолютно нормальный, пока тебя всё устраивает.</p>
-      <p><strong>Цена сценария:</strong> год, который уже не повторится.</p>
+    <p>Я провожу личные разговоры по одной причине. Мне важно понять, подходит ли вам это направление и подходите ли вы команде. Это партнёрство на годы, а не «давай попробуем».</p>
+
+    <div class="glass final reveal">
+      <h3 style="margin-bottom:10px">Что сделаю я</h3>
+      <p>Разберу вашу ситуацию, покажу платформу изнутри, покажу маркетинг-план на цифрах, покажу систему обучения, отвечу на вопросы без впаривания. Если решите зайти, помогу стартовать.</p>
+      <h3 style="margin-bottom:10px">Что нужно от вас</h3>
+      <p>15-20 минут и решение разобраться.</p>
+      <p style="color:var(--muted)">Стоит это ноль. Мне выгодно работать с теми, кто готов расти.</p>
     </div>
 
-    <div class="sc">
-      <div class="tag">Сценарий Б</div>
-      <h3 style="margin-top:6px">Пробовать самостоятельно</h3>
-      <p>Заходишь в какую-то нишу без наставника. Полгода тратишь на ошибки, которые уже совершили другие. Может, выйдешь в плюс. Может, нет. По статистике — 50 на 50.</p>
-      <p><strong>Цена сценария:</strong> полгода времени и от 100 000 до 500 000 рублей на тесты, которые часто ничего не дают.</p>
+    <div class="cta">
+      <a class="btn" href="https://t.me/dellioner" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.86l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.14L18.1 6.4c.4-.36-.09-.56-.63-.2L7.28 12.6l-4.98-1.56c-1.08-.34-1.1-1.08.23-1.6l19.46-7.5c.9-.33 1.7.22 1.4 1.36z"/></svg>
+        Написать мне в Telegram
+      </a>
+      <div class="cta-note">Напишите одну фразу: «Прочитал гайд, хочу разобрать свою ситуацию». Договоримся на созвон в ближайшие дни.</div>
     </div>
 
-    <div class="sc win">
-      <div class="tag">Сценарий В · рекомендую</div>
-      <h3 style="margin-top:6px">Зайти в туризм с командой и системой</h3>
-      <p>Заходишь в MWR Life вместе с командой <strong>«Первый класс»</strong>. Получаешь систему обучения, личное наставничество, готовые материалы. За 3–12 месяцев выходишь на доход на другом уровне. И параллельно начинаешь больше и выгоднее путешествовать.</p>
-      <p><strong>Цена входа:</strong> активация клубной карты. Большая часть сразу возвращается тебе в баллах лояльности — их ты можешь потратить на своё путешествие сразу после регистрации. Фактически в компанию ты заходишь по стоимости ужина в ресторане + получаешь <strong>«франшизу» с обучением.</strong> Остальное превращается в твою первую поездку. Точные цифры разберём в личном разговоре.</p>
+    <figure class="cover reveal">
+      <img src="images/15-final.jpeg" alt="До встречи" loading="lazy">
+    </figure>
+
+    <div class="foot">
+      <b>Дмитрий Власов</b> · @dellioner
     </div>
-  </div>
-
-  <p style="text-align:center;font-size:20px;font-weight:700;color:var(--accent-dark);margin:28px 0 8px">
-    И да, это доступно каждому. Но не для каждого.
-  </p>
-
-  <hr>
-
-  <div class="section-top">
-    <span class="kicker">Часть 9</span>
-    <h2 id="cta">Что делать дальше</h2>
-  </div>
-
-  <p>Для простоты я выстроил для тебя два уровня входа на выбор:</p>
-
-  <!-- CTA 1: канал -->
-  <div class="cta-block">
-    <span class="kicker">Уровень 1</span>
-    <h3 style="margin-top:14px">📺 Telegram-канал «Первый класс»</h3>
-    <p>Если ты пока не готов поговорить лично — это нормально. Подпишись на канал. Там я выкладываю:</p>
-    <ul>
-      <li>Кейсы реальных поездок команды (с цифрами экономии и фото).</li>
-      <li>Разборы MWR Life изнутри.</li>
-      <li>Свои мысли по построению команды, эффективности, дисциплине и онлайн-бизнесу в целом.</li>
-      <li>Закулисье моей собственной работы в нише.</li>
-      <li>Прямые эфиры, поддержку и ответы на вопросы.</li>
-    </ul>
-    <a class="btn btn-tg" href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">
-      📨 Подписаться на канал
-    </a>
-    <div class="btn-sub">Понаблюдай. Посмотри другие кейсы. Как решишь — напиши.</div>
-  </div>
-
-  <!-- CTA 2: лично -->
-  <div class="cta-block cta-dark">
-    <span class="kicker">Уровень 2</span>
-    <h3 style="margin-top:14px">💬 Личный разговор со мной</h3>
-    <p>Если, дочитав до этого места, ты понимаешь, что тема не отпускает и чувствуешь, что хочешь узнать подробнее — <strong>напиши мне.</strong></p>
-
-    <p>Я провожу личные разговоры по одной причине. Мне важно понять, подходит ли тебе это направление и подходишь ли ты команде. Это работа в долгую, а не «давай попробуем» или «закинь деньги». <strong>Это тема про партнёрство на долгие годы.</strong></p>
-
-    <p>Есть честный принцип, на котором я строю эти разговоры: <strong>«что я сделаю для тебя — и что ты сделаешь для меня»</strong></p>
-
-    <p><strong>Что я сделаю для тебя:</strong></p>
-    <ul>
-      <li>Помогу разобрать твою текущую ситуацию — что есть, чего по-настоящему хочется.</li>
-      <li>Покажу платформу MWR Life изнутри.</li>
-      <li>Покажу маркетинг-план на конкретных цифрах.</li>
-      <li>Покажу систему обучения.</li>
-      <li>Отвечу на вопросы и помогу разобраться. Без впаривания.</li>
-      <li>Если решишь зайти — покажу, как стартовать и помогу завести личный кабинет.</li>
-    </ul>
-
-    <p><strong>Что ты сделаешь для меня:</strong></p>
-    <ul>
-      <li>Примешь решение разобраться.</li>
-      <li>Выделишь 15–20 минут.</li>
-      <li>Напишешь мне сообщение.</li>
-      <li>В день созвона возьмёшь хорошее настроение на нашу встречу 🙂</li>
-    </ul>
-
-    <p><strong>⏱ Сколько времени:</strong> 15–20 минут на первый разговор. Если зацепит — назначаем основной.</p>
-    <p><strong>💵 Сколько стоит:</strong> ноль. Мне выгодно работать с теми, кто готов расти. Моя работа — найти своих людей, с кем кайфово работать, отдыхать и, возможно, стать друзьями.</p>
-
-    <a class="btn btn-light" href="https://t.me/dellioner" target="_blank" rel="noopener">
-      ✍️ Написать мне в Telegram
-    </a>
-    <div class="btn-sub">@dellioner — отвечаю лично</div>
-  </div>
-
-  <hr>
-
-  <h2>Что делать прямо сейчас</h2>
-  <div class="step"><div class="n">1</div><div>Открой Telegram.</div></div>
-  <div class="step"><div class="n">2</div><div>Напиши <a href="https://t.me/dellioner" target="_blank" rel="noopener">@dellioner</a>.</div></div>
-  <div class="step"><div class="n">3</div><div>Отправь одну фразу:<br><strong>«Прочитал гайд. Хочу разобрать свою ситуацию.»</strong></div></div>
-  <p>Договоримся на созвон в ближайшие дни.</p>
-
-  <hr>
-
-  <div class="callout">
-    <p style="margin:0"><strong>P.S.</strong></p>
-    <p style="margin:8px 0 0">Каждый месяц промедления — это месяц, который ты уже не вернёшь.</p>
-    <p style="margin:8px 0 0">Туризм сейчас — это то же самое, что недвижимость в начале нулевых. Или косметика в эпоху расцвета сетевого. Большинство тех, кто мог зайти тогда — не зашли и до сих пор жалеют. Не повторяй этой ошибки, если чувствуешь отклик внутри.</p>
-  </div>
-
-  <div class="callout">
-    <p style="margin:0"><strong>P.P.S.</strong></p>
-    <p style="margin:8px 0 0">Если, дочитав, ты подумал <strong>«звучит интересно, но я пока не уверен»</strong> — это правильная реакция. Именно с такой реакцией и приходят те, кто потом остаётся в команде надолго.</p>
-  </div>
-
-  <figure class="cover" style="margin-top:28px">
-    <img src="images/15-final.jpeg" alt="До встречи!" loading="lazy">
-  </figure>
-
-  <p class="foot">До встречи!<br><strong>Дмитрий Власов</strong> · <a href="https://t.me/dellioner">@dellioner</a></p>
+  </section>
 
 </main>
 
-<!-- липкая панель CTA для мобилок -->
-<div class="sticky">
-  <div class="row">
-    <a class="btn btn-secondary" href="https://t.me/+TJVyV1DtCf03MjY6" target="_blank" rel="noopener">📺 Канал</a>
-    <a class="btn btn-primary" href="https://t.me/dellioner" target="_blank" rel="noopener">💬 Написать лично</a>
+<!-- ── ПОЛНОЭКРАННЫЙ ПРОСМОТР ──────────────────────────────────── -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр направления">
+  <div class="lb-bar">
+    <div class="lb-title" id="lb-title"></div>
+    <button class="lb-close" id="lb-close" aria-label="Закрыть">×</button>
+  </div>
+  <div class="lb-stage" id="lb-stage">
+    <img id="lb-img" src="" alt="">
+  </div>
+  <div>
+    <div class="lb-hint" id="lb-hint">Свайп в сторону, чтобы посмотреть список включений</div>
+    <div class="lb-foot">
+      <button class="lb-nav" id="lb-prev" aria-label="Назад">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="lb-dots" id="lb-dots"><i class="on"></i><i></i></div>
+      <button class="lb-nav" id="lb-next" aria-label="Вперёд">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
   </div>
 </div>
 
+<!-- ===================================================================
+     ⚙️  НАПРАВЛЕНИЯ LIFE EXPERIENCE
+     ===================================================================
+     Чтобы добавить или изменить направление, правьте только этот список.
+     card  - картинка карточки, details - картинка со списком включений.
+=================================================================== -->
+<script>
+const TRIPS = [
+  {name:"Yerevan",            price:"$699",   points:"до 250 баллов", dates:"9-14 сентября 2026",
+   card:"images/20-le-yerevan.jpeg",  details:"images/21-le-yerevan-details.jpeg"},
+  {name:"Dagestan",           price:"$999",   points:"до 300 баллов", dates:"16-21 августа 2026",
+   card:"images/22-le-dagestan.jpeg", details:"images/23-le-dagestan-details.jpeg"},
+  {name:"Paris Fashion Week", price:"$1 399", points:"до 900 баллов", dates:"1-5 октября 2026",
+   card:"images/24-le-paris.jpeg",    details:"images/25-le-paris-details.jpeg"},
+  {name:"Baku Formula 1",     price:"$1 499", points:"до 750 баллов", dates:"23-27 сентября 2026",
+   card:"images/26-le-baku.jpeg",     details:"images/27-le-baku-details.jpeg"},
+  {name:"Ferrari",            price:"$1 799", points:"до 900 баллов", dates:"17-20 октября 2026",
+   card:"images/28-le-ferrari.jpeg",  details:"images/29-le-ferrari-details.jpeg"},
+  {name:"Tibet",              price:"$2 999", points:"до 900 баллов", dates:"20 августа - 3 сентября 2026",
+   card:"images/30-le-tibet.jpeg",    details:"images/31-le-tibet-details.jpeg"}
+];
+
+(function(){
+  const $ = id => document.getElementById(id);
+
+  document.documentElement.classList.add("js");
+
+  /* ---- прогресс чтения и появление блоков ---- */
+  const bar = $("progress");
+  let pending = [];
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? Math.min(100, window.scrollY / h * 100) : 0) + "%";
+    if(!pending.length) return;
+    const limit = window.innerHeight * .96;
+    pending = pending.filter(el => {
+      if(el.getBoundingClientRect().top > limit) return true;
+      el.classList.add("in");
+      return false;
+    });
+  };
+  window.addEventListener("scroll", onScroll, {passive:true});
+  window.addEventListener("resize", onScroll);
+  onScroll();
+
+  /* ---- сетка направлений ---- */
+  const grid = $("le-grid");
+  TRIPS.forEach((t, i) => {
+    const b = document.createElement("button");
+    b.className = "le-card reveal";
+    b.type = "button";
+    b.setAttribute("aria-label", "Открыть " + t.name);
+    b.innerHTML =
+      '<span class="le-shot">' +
+        '<img src="' + t.card + '" alt="' + t.name + '" loading="lazy">' +
+        '<span class="le-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">' +
+        '<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>' +
+      '</span>' +
+      '<span class="le-name">' + t.name + '</span>' +
+      '<span class="le-meta">' + t.price + ' · <b>' + t.points + '</b></span>';
+    const img = b.querySelector("img");
+    img.addEventListener("error", () => holder(img, t.name));
+    b.addEventListener("click", () => open(i));
+    grid.appendChild(b);
+  });
+
+  /* заглушка, пока картинки нет в репозитории */
+  function holder(img, name){
+    const box = img.parentNode;
+    img.remove();
+    if(box.querySelector(".le-ph")) return;
+    const ph = document.createElement("span");
+    ph.className = "le-ph";
+    ph.textContent = name + ": фото скоро";
+    box.appendChild(ph);
+  }
+
+  /* ---- полноэкранный просмотр ---- */
+  const lb = $("lb"), lbImg = $("lb-img"), lbTitle = $("lb-title"),
+        dots = $("lb-dots").children, hint = $("lb-hint");
+  let trip = 0, slide = 0;
+
+  function render(){
+    const t = TRIPS[trip];
+    lbImg.src = slide === 0 ? t.card : t.details;
+    lbImg.alt = t.name + (slide === 0 ? "" : ", список включений");
+    lbTitle.innerHTML = t.name + "<span>" + t.price + " · " + t.points + " · " + t.dates + "</span>";
+    dots[0].className = slide === 0 ? "on" : "";
+    dots[1].className = slide === 1 ? "on" : "";
+    hint.style.visibility = slide === 0 ? "visible" : "hidden";
+  }
+  function open(i){
+    trip = i; slide = 0; render();
+    lb.classList.add("on");
+    document.body.classList.add("locked");
+  }
+  function close(){
+    lb.classList.remove("on");
+    document.body.classList.remove("locked");
+  }
+  function go(step){
+    slide = (slide + step + 2) % 2;
+    render();
+  }
+
+  lbImg.addEventListener("error", () => {
+    lbImg.alt = "Фото скоро появится";
+  });
+  $("lb-close").addEventListener("click", close);
+  $("lb-prev").addEventListener("click", () => go(-1));
+  $("lb-next").addEventListener("click", () => go(1));
+  lb.addEventListener("click", e => { if(e.target === lb || e.target.id === "lb-stage") close(); });
+  document.addEventListener("keydown", e => {
+    if(!lb.classList.contains("on")) return;
+    if(e.key === "Escape") close();
+    if(e.key === "ArrowLeft") go(-1);
+    if(e.key === "ArrowRight") go(1);
+  });
+
+  /* свайп */
+  let x0 = null, y0 = null;
+  lb.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  lb.addEventListener("touchend", e => {
+    if(x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    const dy = e.changedTouches[0].clientY - y0;
+    if(Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1);
+    x0 = y0 = null;
+  }, {passive:true});
+
+  /* ---- мягкое появление картинок и карточек ---- */
+  pending = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  onScroll();
+  /* страховка на случай, если события скролла почему-то не доходят:
+     раз в две секунды проверяем сами, пока есть что показывать */
+  const guard = setInterval(() => {
+    onScroll();
+    if(!pending.length) clearInterval(guard);
+  }, 2000);
+
+  /* заглушка для существующих картинок, если файл не найден */
+  document.querySelectorAll("figure img").forEach(img => {
+    img.addEventListener("error", () => {
+      img.style.background = "linear-gradient(160deg,#14141d,#0c0c12)";
+      img.style.minHeight = "180px";
+    });
+  });
+})();
+</script>
 </body>
 </html>
